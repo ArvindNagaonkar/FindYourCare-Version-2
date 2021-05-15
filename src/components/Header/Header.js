@@ -33,7 +33,7 @@ function Header() {
 
   return (
     <>
-      <header className="Header">
+      <header className="Header" id="Home">
         <img src="" alt=""></img>
         <div className="text-box">
           <h1 className="heading-primary">

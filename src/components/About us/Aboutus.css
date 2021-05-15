@@ -1,0 +1,49 @@
+/* .aboutus {
+  margin: 30px;
+} */
+
+.aboutus > h1 {
+  text-align: center;
+  font-size: 3rem;
+  color: #55c57a;
+  padding: 100px 0px 48px 0px;
+}
+
+.aboutus > a {
+  text-decoration: none;
+  color: grey;
+  padding-left: 30px;
+  padding-bottom: 30px;
+}
+
+.aboutus-wrapper {
+  display: flex;
+  flex: 1;
+  margin: 20px 30px 0 30px;
+}
+
+.aboutus-wrapper > a {
+  display: block;
+}
+
+.aboutus-wrapper > img {
+  border-radius: 8px;
+  width: 130vh;
+  height: 65vh;
+  flex: 0.45;
+  box-shadow: 0px 20px 30px rgba(0, 0, 0, 0.12);
+}
+
+.aboutText-box {
+  align-self: center;
+  justify-self: center;
+  padding: 0 30px 0 30px;
+  flex: 0.55;
+}
+
+.aboutText-box > p {
+  font-size: 1.2rem;
+  text-align: justify;
+  color: black;
+  padding: 20px;
+}

@@ -14,7 +14,7 @@ import Plasma_Blood from "../../assets/images/Plasma-Blood.png";
 
 function Services() {
   return (
-    <div className="sections-services">
+    <div className="sections-services" id="Services">
       <h1>Services</h1>
       <div className="services-wrapper">
         <div className="services-box">

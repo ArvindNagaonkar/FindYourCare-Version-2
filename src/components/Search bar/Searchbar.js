@@ -47,7 +47,7 @@ function Searchbar({ stateSuggetions }) {
       <div className="search-input">
         <input
           type="text"
-          placeholder="Search.."
+          placeholder="Search you'r City.."
           className="search"
           value={searchtext}
           onChange={handleChange}
