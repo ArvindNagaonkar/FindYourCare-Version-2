@@ -1,15 +1,10 @@
-* {
-  margin: 0;
-  padding: 0;
-  box-sizing: border-box;
-}
-
 body {
+  overflow-x: hidden;
   font-family: "Lato", sans-serif;
   font-family: 400;
   font-size: 16px;
-  line-height: 1.7;
   color: #777;
+  background-color: #eee;
 }
 
 code {

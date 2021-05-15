@@ -1,0 +1,32 @@
+.sections-services {
+  position: static;
+  margin: -140px 30px 0px 30px;
+}
+
+.sections-services > h1 {
+  text-align: center;
+  font-size: 3rem;
+  color: #55c57a;
+  padding-bottom: 30px;
+}
+
+.services-wrapper {
+  margin: 30px auto;
+  display: grid;
+  grid-template-columns: repeat(auto-fit, minmax(150px, 2fr));
+  grid-gap: 40px;
+  padding-bottom: 30px;
+}
+
+.services-box {
+  border-radius: 8px;
+  height: 12rem;
+  display: flex;
+  flex-direction: column;
+  align-content: center;
+  justify-content: center;
+  background-color: #fff;
+  padding: 10px;
+  text-align: center;
+  box-shadow: 0px 20px 30px rgba(0, 0, 0, 0.1);
+}

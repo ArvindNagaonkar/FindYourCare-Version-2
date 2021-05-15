@@ -3,7 +3,7 @@
   position: sticky;
   position: -webkit-sticky;
   top: 0; /* required */
-  height: 80px;
+  height: 65px;
   display: flex;
   justify-content: center;
   align-items: center;

@@ -25,8 +25,9 @@
 .search-input .autocom-box {
   opacity: 1;
   pointer-events: auto;
-  max-height: 280px;
+  max-height: 147px;
   overflow-y: auto;
+  /* margin-bottom: -80px; */
 }
 
 .search-input .icon {
@@ -47,7 +48,7 @@
   padding: 8px 12px;
   display: block;
   width: 100%;
-  cursor: default;
+  cursor: pointer;
   border-radius: 3px;
 }
 
