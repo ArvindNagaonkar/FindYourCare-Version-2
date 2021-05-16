@@ -6,7 +6,7 @@
       rgba(126, 213, 111, 0.8),
       rgba(40, 180, 40, 0.7)
     ),
-    url(../../assets/images/background.jpg);
+    url(../../../../assets/images/background.jpg);
   background-size: cover;
   background-position: top;
   clip-path: polygon(0 0, 100% 0, 100% 75vh, 0 100%);

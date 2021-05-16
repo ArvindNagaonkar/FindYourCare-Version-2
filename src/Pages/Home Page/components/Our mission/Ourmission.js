@@ -1,5 +1,5 @@
 import React from "react";
-import OurmissionImg from "../../assets/images/Ourmission.jpg";
+import OurmissionImg from "../../../../assets/images/Ourmission.jpg";
 function Ourmission() {
   return (
     <div className="aboutus">

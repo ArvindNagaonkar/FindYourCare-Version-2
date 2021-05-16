@@ -1,19 +1,25 @@
 import "./App.css";
-import Header from "./components/Header/Header";
-import Navbar from "./components/Navbar/Navbar";
-import Services from "./components/Services/Services";
-import Aboutus from "./components/About us/Aboutus";
-import Ourmission from "./components/Our mission/Ourmission";
+import Navbar from "./Pages/Home Page/components/Navbar/Navbar";
+import HomePage from "./Pages/Home Page/HomePage";
+import UserAccount from "./Pages/UserAccount Page/components/UserAccount";
+import { BrowserRouter as Router, Switch, Route } from "react-router-dom";
 
 function App() {
   return (
-    <div className="App">
-      <Navbar />
-      <Header />
-      <Services />
-      <Aboutus />
-      <Ourmission />
-    </div>
+    <Router>
+      <div className="App">
+        <Navbar />
+        <Switch>
+          <Route path="/" exact component={HomePage} />
+          <Route path="/login" exact component={UserAccount} />
+        </Switch>
+
+        {/* <Header />
+        <Services />
+        <Aboutus />
+        <Ourmission /> */}
+      </div>
+    </Router>
   );
 }
 

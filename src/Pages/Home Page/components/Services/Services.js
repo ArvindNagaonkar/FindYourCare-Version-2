@@ -1,16 +1,16 @@
 import React from "react";
 import "./Services.css";
-import Ambulance from "../../assets/images/Ambulance.png";
-import Helpline from "../../assets/images/Helpline.png";
-import Teleconsultation from "../../assets/images/Teleconsultation.png";
-import Testing from "../../assets/images/Testing.png";
-import Covid_care_at_home from "../../assets/images/Covid_care_at_home.png";
-import Food_Med_Delivery from "../../assets/images/Food-Med_Delivery.png";
-import Oxygen from "../../assets/images/Oxygen.png";
-import Covid_Medicines from "../../assets/images/Covid_Medicines.png";
-import Bereavenment_Services from "../../assets/images/Bereavenment_Services.png";
-import Volunteer_Databases_Groups from "../../assets/images/Volunteer_Databases-Groups.png";
-import Plasma_Blood from "../../assets/images/Plasma-Blood.png";
+import Ambulance from "../../../../assets/images/Ambulance.png";
+import Helpline from "../../../../assets/images/Helpline.png";
+import Teleconsultation from "../../../../assets/images/Teleconsultation.png";
+import Testing from "../../../../assets/images/Testing.png";
+import Covid_care_at_home from "../../../../assets/images/Covid_care_at_home.png";
+import Food_Med_Delivery from "../../../../assets/images/Food-Med_Delivery.png";
+import Oxygen from "../../../../assets/images/Oxygen.png";
+import Covid_Medicines from "../../../../assets/images/Covid_Medicines.png";
+import Bereavenment_Services from "../../../../assets/images/Bereavenment_Services.png";
+import Volunteer_Databases_Groups from "../../../../assets/images/Volunteer_Databases-Groups.png";
+import Plasma_Blood from "../../../../assets/images/Plasma-Blood.png";
 
 function Services() {
   return (

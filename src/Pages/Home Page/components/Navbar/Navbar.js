@@ -1,8 +1,8 @@
 import React, { useState } from "react";
 import { Button } from "./Button";
 import "./Navbar.css";
-import { MenuItems } from "./NavbarElements";
-import { Link } from "react-scroll";
+import { Link as Slink } from "react-scroll";
+import { Link as Rlink } from "react-router-dom";
 
 function Navbar() {
   const [state, setState] = useState({ Clicked: false });
@@ -21,50 +21,48 @@ function Navbar() {
       </div>
       <ul className={state.Clicked ? "nav-menu active" : "nav-menu"}>
         <li className="nav-links">
-          <Link className="nav-links" to="Home" smooth={true} duration={1000}>
+          <Rlink style={{ textDecoration: "none", color: "white" }} to="/">
             Home
-          </Link>
+          </Rlink>
         </li>
         <li className="nav-links">
-          <Link
+          <Slink
             className="nav-links"
             to="Services"
             smooth={true}
             duration={1000}
           >
             Services
-          </Link>
+          </Slink>
         </li>
         <li className="nav-links">
-          <Link className="nav-links" to="Blog" smooth={true} duration={1000}>
+          <Slink className="nav-links" to="Blog" smooth={true} duration={1000}>
             Blog
-          </Link>
+          </Slink>
         </li>
         <li className="nav-links">
-          <Link
+          <Slink
             className="nav-links"
             to="Aboutus"
             smooth={true}
             duration={1000}
           >
             About Us
-          </Link>
+          </Slink>
         </li>
         <li className="nav-links">
-          <Link
+          <Slink
             className="nav-links"
             to="ContactUs"
             smooth={true}
             duration={1000}
           >
             Contact Us
-          </Link>
+          </Slink>
         </li>
-        <li>
-          <a className="nav-links-mobile" herf="">
-            Sign In
-          </a>
-        </li>
+        <Rlink to="/login">
+          <li className="nav-links-mobile">Sign In</li>
+        </Rlink>
         {/* 
         {MenuItems.map((item, index) => {
           return (
@@ -83,7 +81,9 @@ function Navbar() {
           );
         })} */}
       </ul>
-      <Button>Sign In</Button>
+      <Rlink to="/login">
+        <Button>Sign In</Button>
+      </Rlink>
       <Button>Service Provider</Button>
     </nav>
   );

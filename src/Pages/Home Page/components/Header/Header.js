@@ -1,5 +1,5 @@
 import "./Header.css";
-import Searchbar from "../Search bar/Searchbar";
+import Searchbar from "../../components/Search bar/Searchbar";
 function Header() {
   let suggestions = [
     "Andhra Pradesh",
