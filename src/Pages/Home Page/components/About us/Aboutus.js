@@ -7,7 +7,9 @@ function Aboutus() {
       <h1>About Us</h1>
       <div className="aboutus-wrapper">
         <img src={AboutusImg} alt="" />
-
+        <a href="https://www.freepik.com/vectors/business">
+          Business vector created by pikisuperstar - www.freepik.com
+        </a>
         <div className="aboutText-box">
           <p>
             FINDYOURCARE is a unique online healthcare aggregator platform that

@@ -55,3 +55,27 @@
 .autocom-box li:hover {
   background: #efefef;
 }
+
+@media screen and (max-width: 480px) {
+  .wrapper {
+    max-width: 350px;
+    margin: 20px auto;
+  }
+}
+
+@media screen and (max-width: 380px) {
+  .wrapper {
+    max-width: 250px;
+    margin: 20px auto;
+  }
+
+  .search-input input {
+    height: 50px;
+    padding: 0 50px 0 20px;
+    font-size: 16px;
+  }
+
+  .search-input .icon {
+    line-height: 50px;
+  }
+}

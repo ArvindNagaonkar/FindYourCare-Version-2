@@ -6,6 +6,9 @@ function Ourmission() {
       <h1>Our Mission</h1>
       <div className="aboutus-wrapper">
         <img src={OurmissionImg} alt="" />
+        <a href="https://www.freepik.com/vectors/cartoon">
+          Cartoon vector created by vectorjuice - www.freepik.com
+        </a>
         <div className="aboutText-box">
           <p>
             FINDYOURCARE is on a mission make quality healthcare affordable and
