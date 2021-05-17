@@ -19,7 +19,7 @@
 .aboutus-wrapper {
   display: flex;
   flex: 1;
-  margin: 20px 30px 0 30px;
+  margin: 20px 0px 0 20px;
 }
 
 .aboutus-wrapper > a {
@@ -45,5 +45,79 @@
   font-size: 1.2rem;
   text-align: justify;
   color: black;
-  padding: 20px;
+  padding: 20px 20px 8px 20px;
+}
+
+@media screen and (max-width: 1062px) {
+  .aboutText-box > p {
+    padding: 20px 0px 0px 0px;
+  }
+  .aboutText-box {
+    padding-left: 30px;
+  }
+}
+
+@media screen and (max-width: 1014px) {
+  .aboutus > a {
+    font-size: 12px;
+  }
+
+  .aboutus-wrapper > img {
+    flex: 0.3;
+  }
+  .aboutText-box {
+    flex: 0.7;
+  }
+}
+
+@media screen and (max-width: 996px) {
+  .aboutus-wrapper > img {
+    height: 57vh;
+    flex: 0.45;
+  }
+}
+
+@media screen and (max-width: 946px) {
+  .aboutus-wrapper > img {
+    border-radius: 8px;
+    height: 52vh;
+    flex: 0.45;
+  }
+
+  .aboutText-box > p {
+    font-size: 1.1rem;
+  }
+}
+
+@media screen and (max-width: 866px) {
+  .aboutus > a {
+    font-size: 10px;
+  }
+
+  .aboutus-wrapper > img {
+    height: 45vh;
+    flex: 0.45;
+  }
+
+  .aboutText-box > p {
+    font-size: 1rem;
+    padding: 10px 0px 0px 0px;
+  }
+}
+
+@media screen and (max-width: 784px) {
+  .aboutus-wrapper > img {
+    height: 40vh;
+    flex: 0.45;
+  }
+}
+
+@media screen and (max-width: 742px) {
+  .aboutus-wrapper > img {
+    height: 35vh;
+  }
+
+  .aboutText-box > p {
+    font-size: 0.9rem;
+  }
 }

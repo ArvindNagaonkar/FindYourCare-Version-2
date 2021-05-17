@@ -77,3 +77,55 @@
   padding: 8px 25px;
   border-radius: 20px;
 }
+
+@media screen and (max-width: 1040px) {
+  .form_group {
+    margin-left: 16%;
+    width: 65%;
+  }
+}
+
+@media screen and (max-width: 998px) {
+  .userRegister {
+    margin-top: 10px;
+  }
+  .signUpF {
+    margin-top: 10px;
+    padding: 8px 10px;
+    font-size: 12px;
+  }
+  .SignUpG {
+    font-size: 12px;
+    padding: 8px 10px;
+  }
+}
+
+@media screen and (max-width: 896px) {
+  .form_input {
+    font-size: 15px;
+  }
+
+  .form_label {
+    font-size: 0.9rem;
+  }
+
+  .RegisterButton {
+    margin-top: 12px;
+    font-size: 16px;
+  }
+
+  .form_group {
+    margin-top: 6px;
+  }
+
+  .form {
+    margin-top: 10px;
+  }
+}
+
+@media screen and (max-width: 800px) {
+  .form_group {
+    margin-left: 12%;
+    width: 78%;
+  }
+}

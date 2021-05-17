@@ -60,28 +60,11 @@ function Navbar() {
             Contact Us
           </Slink>
         </li>
-        <Rlink to="/login">
+        <Rlink to="/login" style={{ textDecoration: "none", color: "white" }}>
           <li className="nav-links-mobile">Sign In</li>
         </Rlink>
-        {/* 
-        {MenuItems.map((item, index) => {
-          return (
-            <li key={index}>
-              <Link
-                className={item.cName}
-                to={item.url}
-                smooth={true}
-                duration={1000}
-                offset={50}
-              >
-                {" "}
-                {item.title}{" "}
-              </Link>
-            </li>
-          );
-        })} */}
       </ul>
-      <Rlink to="/login">
+      <Rlink className="Buttonlink" to="/login">
         <Button>Sign In</Button>
       </Rlink>
       <Button>Service Provider</Button>
