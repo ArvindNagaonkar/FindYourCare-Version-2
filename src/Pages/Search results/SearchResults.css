@@ -1,0 +1,35 @@
+.SearchResult-header {
+  display: flex;
+  flex-direction: row;
+  justify-content: center;
+  margin-top: 40px;
+}
+
+.SearchResult-header > img {
+  padding: 20px 0px 0px 10px;
+  height: 100%;
+}
+.searchOut-container {
+  display: block;
+  margin: 18px auto;
+  display: flex;
+  align-items: center;
+  width: 40%;
+  border: 1px solid grey;
+}
+
+.searchOut-container > img {
+  justify-self: start;
+  padding: 10px;
+}
+
+.searchOut-info > span {
+  padding: 5px;
+}
+
+.searchOut-info {
+  border-left: 1px solid grey;
+  padding-left: 20px;
+  display: flex;
+  flex-direction: column;
+}

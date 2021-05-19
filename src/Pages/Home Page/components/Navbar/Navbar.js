@@ -2,6 +2,7 @@ import React, { useState } from "react";
 import { Button } from "./Button";
 import "./Navbar.css";
 import { Link as Slink } from "react-scroll";
+import { Link as RLink } from "react-router-dom";
 import Logo from "../../../../assets/icons/Flatcomp.png";
 
 function Navbar() {
@@ -20,7 +21,9 @@ function Navbar() {
         <i className={state.Clicked ? "fas fa-times" : "fas fa-bars"}></i>
       </div>
       <ul className={state.Clicked ? "nav-menu active" : "nav-menu"}>
-        <li className="nav-links">Home</li>
+        <RLink to="/" style={{ textDecoration: "none" }}>
+          <li className="nav-links">Home</li>
+        </RLink>
         <li className="nav-links">
           <Slink
             className="nav-links"
