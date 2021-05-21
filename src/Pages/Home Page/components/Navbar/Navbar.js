@@ -14,18 +14,23 @@ function Navbar() {
 
   return (
     <nav className="navbarItems">
-      <h1 className="navbar-logo">
-        <img src={Logo} alt=""></img>
-      </h1>
+      <RLink to="/">
+        <div className="navbar-logo">
+          <img src={Logo} alt="" />
+        </div>
+      </RLink>
       <div className="menu-icon" onClick={handleClick}>
         <i className={state.Clicked ? "fas fa-times" : "fas fa-bars"}></i>
       </div>
       <ul className={state.Clicked ? "nav-menu active" : "nav-menu"}>
         <RLink to="/" style={{ textDecoration: "none" }}>
-          <li className="nav-links">Home</li>
+          <li className="nav-links" onClick={handleClick}>
+            Home
+          </li>
         </RLink>
         <li className="nav-links">
           <Slink
+            onClick={handleClick}
             className="nav-links"
             to="Services"
             smooth={true}
@@ -35,12 +40,19 @@ function Navbar() {
           </Slink>
         </li>
         <li className="nav-links">
-          <Slink className="nav-links" to="Blog" smooth={true} duration={1000}>
+          <Slink
+            onClick={handleClick}
+            className="nav-links"
+            to="Blog"
+            smooth={true}
+            duration={1000}
+          >
             Blog
           </Slink>
         </li>
         <li className="nav-links">
           <Slink
+            onClick={handleClick}
             className="nav-links"
             to="Aboutus"
             smooth={true}
@@ -51,6 +63,7 @@ function Navbar() {
         </li>
         <li className="nav-links">
           <Slink
+            onClick={handleClick}
             className="nav-links"
             to="ContactUs"
             smooth={true}

@@ -1,3 +1,7 @@
+.SearchResult {
+  margin-top: 5%;
+}
+
 .SearchResult-header {
   display: flex;
   flex-direction: row;
@@ -14,8 +18,15 @@
   margin: 18px auto;
   display: flex;
   align-items: center;
-  width: 40%;
+  width: 50%;
   border: 1px solid grey;
+}
+
+.searchResultHeader {
+  display: flex;
+  flex: 1;
+  justify-content: center;
+  align-items: center;
 }
 
 .searchOut-container > img {
@@ -32,4 +43,94 @@
   padding-left: 20px;
   display: flex;
   flex-direction: column;
+}
+
+.searchResultHeaderContainer {
+  display: flex;
+  flex-direction: column;
+  flex: 1;
+  justify-content: center;
+  align-items: center;
+}
+
+.searchResultHeaderContainer > span {
+  font-weight: 700;
+}
+
+@media screen and (max-width: 996px) {
+  .searchOut-container {
+    width: 60%;
+  }
+}
+@media screen and (max-width: 800px) {
+  .searchOut-container {
+    width: 65%;
+  }
+}
+
+@media screen and (max-width: 700px) {
+  .searchOut-container {
+    width: 75%;
+  }
+}
+
+@media screen and (max-width: 600px) {
+  .searchOut-container {
+    width: 80%;
+  }
+
+  .searchOut-info {
+    font-size: 0.9rem;
+  }
+  .searchOut-container > img {
+    width: 25%;
+  }
+}
+
+@media screen and (max-width: 480px) {
+  .searchOut-container {
+    width: 90%;
+  }
+}
+
+@media screen and (max-width: 411px) {
+  .searchResultHeaderContainer > span {
+    font-size: 0.9rem;
+  }
+}
+
+@media screen and (max-width: 400px) {
+  .searchOut-info {
+    font-size: 0.8rem;
+  }
+  .searchResultHeader > img {
+    width: 20%;
+    padding: 0px;
+  }
+  .searchOut-info {
+    padding-left: 10px;
+  }
+}
+
+@media screen and (max-width: 360px) {
+  .searchOut-container {
+    width: 96%;
+  }
+  .searchResultHeader > img {
+    width: 28%;
+  }
+
+  .searchResultHeader > h3 {
+    font-size: 1.1rem;
+  }
+
+  .searchOut-container > img {
+    padding: 0px;
+  }
+}
+
+@media screen and (max-width: 300px) {
+  .searchOut-info {
+    font-size: 0.7rem;
+  }
 }

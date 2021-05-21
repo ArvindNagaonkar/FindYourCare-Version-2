@@ -1,15 +1,13 @@
 import React from "react";
-import OurmissionImg from "../../../../assets/images/Ourmission.jpg";
+import OurmissionImg from "../../../../assets/images/15.png";
+import "./Ourmission.css";
 function Ourmission() {
   return (
-    <div className="aboutus">
+    <div className="Ourmission">
       <h1>Our Mission</h1>
-      <div className="aboutus-wrapper">
+      <div className="Ourmission-wrapper">
         <img src={OurmissionImg} alt="" />
-        <a href="https://www.freepik.com/vectors/cartoon">
-          Cartoon vector created by vectorjuice - www.freepik.com
-        </a>
-        <div className="aboutText-box">
+        <div className="OurmissionText-box">
           <p>
             FINDYOURCARE is on a mission make quality healthcare affordable and
             accessible for over a billion Indians. We believe in empowering our
@@ -18,9 +16,6 @@ function Ourmission() {
           </p>
         </div>
       </div>
-      <a href="https://www.freepik.com/vectors/cartoon">
-        Cartoon vector created by vectorjuice - www.freepik.com
-      </a>
     </div>
   );
 }
