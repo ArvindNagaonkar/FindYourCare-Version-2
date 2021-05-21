@@ -40,15 +40,13 @@ function Navbar() {
           </Slink>
         </li>
         <li className="nav-links">
-          <Slink
-            onClick={handleClick}
-            className="nav-links"
-            to="Blog"
-            smooth={true}
-            duration={1000}
+          <a
+            rel="noreferrer"
+            href="https://www.iafindia.com/mr-arbaaz-kadwekar/"
+            target="_blank"
           >
             Blog
-          </Slink>
+          </a>
         </li>
         <li className="nav-links">
           <Slink

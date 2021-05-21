@@ -1,40 +1,38 @@
 import React from "react";
 import "./SearchResults.css";
-import Searchbar from "../Home Page/components/Search bar/Searchbar";
+// import Searchbar from "../Home Page/components/Search bar/Searchbar";
 import { useInput } from "../../context/SearchContext";
 
 function SearchResults() {
-  const { getServices, ClickedService, searchCity } = useInput();
+  const { getServices, ClickedService, SearchedText } = useInput();
 
   function handleImg() {
     if (ClickedService === "Helpline") {
       return "https://firebasestorage.googleapis.com/v0/b/findyourcare-production.appspot.com/o/Service%20icons%2FHelpline.png?alt=media&token=52351238-3c31-4dc0-a204-e32e0239805a";
     }
-    if (ClickedService === "Volunteer Database/Groups") {
-      return "https://firebasestorage.googleapis.com/v0/b/findyourcare-production.appspot.com/o/Service%20icons%2FVolunteer_Databases-Groups.png?alt=media&token=c3c7a575-3107-4323-84c8-0caedac31f88";
-    }
+
     if (ClickedService === "Plasma/Blood") {
-      return "https://firebasestorage.googleapis.com/v0/b/findyourcare-production.appspot.com/o/Service%20icons%2FPlasma-Blood.png?alt=media&token=22fe1b75-d064-4042-9ebe-1462a2af3860";
+      return "https://firebasestorage.googleapis.com/v0/b/findyourcare-production.appspot.com/o/Service%20icons%2FPlasma-Blood.png?alt=media&token=89cf302a-46d0-452a-80ab-3cb1bdc785e9";
     }
     if (ClickedService === "Ambulance") {
       return "https://firebasestorage.googleapis.com/v0/b/findyourcare-production.appspot.com/o/Service%20icons%2FAmbulance.png?alt=media&token=3084d49d-8320-4cb5-a195-224388e8f26a";
     }
     if (ClickedService === "Teleconsultation") {
-      return "https://firebasestorage.googleapis.com/v0/b/findyourcare-production.appspot.com/o/Service%20icons%2FTeleconsultation.png?alt=media&token=4ca7ddef-f9e0-4b0f-ac6d-66a31487b76f";
+      return "https://firebasestorage.googleapis.com/v0/b/findyourcare-production.appspot.com/o/Service%20icons%2F63.png?alt=media&token=03d788c8-5fc1-401d-9ae4-1bb8a5a7a6f6";
     }
-    if (ClickedService === "Testing") {
-      return "https://firebasestorage.googleapis.com/v0/b/findyourcare-production.appspot.com/o/Service%20icons%2FTesting.png?alt=media&token=b6eaae41-4249-4b44-a219-1ad15831a0b0";
+    if (ClickedService === "Diagnostic center & lab") {
+      return "https://firebasestorage.googleapis.com/v0/b/findyourcare-production.appspot.com/o/Service%20icons%2FTesting.png?alt=media&token=56ffc200-b8ad-4201-ad03-7624c730da5f";
     }
     if (ClickedService === "Covid Care at Home") {
       return "https://firebasestorage.googleapis.com/v0/b/findyourcare-production.appspot.com/o/Service%20icons%2FCovid_care_at_home.png?alt=media&token=4d6dcb81-b9ad-4470-ad79-41ff325695d7";
     }
-    if (ClickedService === "Food/Med Delivery") {
+    if (ClickedService === "Food Delivery") {
       return "https://firebasestorage.googleapis.com/v0/b/findyourcare-production.appspot.com/o/Service%20icons%2FFood-Med_Delivery.png?alt=media&token=6a8ab98f-711d-4d83-8b0b-7ebc85d9b560";
     }
-    if (ClickedService === "Oxygen") {
-      return "https://firebasestorage.googleapis.com/v0/b/findyourcare-production.appspot.com/o/Service%20icons%2FOxygen.png?alt=media&token=ac502d47-6bc8-4af2-a4f6-e7694a6e3061";
+    if (ClickedService === "Oxygen cylinder/ oxygen concentration") {
+      return "https://firebasestorage.googleapis.com/v0/b/findyourcare-production.appspot.com/o/Service%20icons%2Foxygen.png?alt=media&token=91bc20f2-4675-4685-ac09-759e5609a363";
     }
-    if (ClickedService === "Covid Medicines") {
+    if (ClickedService === "Covid Medicine") {
       return "https://firebasestorage.googleapis.com/v0/b/findyourcare-production.appspot.com/o/Service%20icons%2FCovid_Medicines.png?alt=media&token=26f15ac2-0c24-4f8c-90a1-7889d876f03d";
     }
     if (ClickedService === "Bereavement Services") {
@@ -55,16 +53,16 @@ function SearchResults() {
   return (
     <>
       <div className="SearchResult">
-        <div className="SearchResult-header">
+        {/* <div className="SearchResult-header">
           <div className="searchbar-box">
             <Searchbar />
           </div>
-        </div>
+        </div> */}
         <div className="searchResultHeaderContainer">
           <div className="searchResultHeader">
             <img src={handleImg()} alt="" />
             <h3>
-              {ClickedService}s {searchCity && "in " + searchCity}
+              {ClickedService}s {SearchedText && "in " + SearchedText}
             </h3>
           </div>
         </div>
@@ -79,6 +77,17 @@ function SearchResults() {
             </div>
           );
         })}
+        {ClickedService === "Covid Medicine" ? (
+          <a
+            href="https://www.google.com/forms/about/"
+            rel="noreferrer"
+            target="_blank"
+          >
+            <button className="flottingB">Buy Medicines</button>
+          </a>
+        ) : (
+          ""
+        )}
       </div>
     </>
   );

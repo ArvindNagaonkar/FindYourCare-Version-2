@@ -57,9 +57,33 @@
   font-weight: 700;
 }
 
+.flottingB {
+  border: none;
+  background-color: #644bff;
+  padding: 10px 20px;
+  color: #fff;
+  border-radius: 30px;
+  font-size: 1.1rem;
+  position: fixed;
+  bottom: 12%;
+  right: 6%;
+}
+
+.flottingB:hover {
+  cursor: pointer;
+  padding: 8px 20px;
+  transition: all 0.3 ease-out;
+  background: #fff;
+  color: #6568f4;
+  transition: 250ms;
+}
+
 @media screen and (max-width: 996px) {
   .searchOut-container {
     width: 60%;
+  }
+  .flottingB {
+    right: 4%;
   }
 }
 @media screen and (max-width: 800px) {
@@ -79,6 +103,11 @@
     width: 80%;
   }
 
+  .flottingB {
+    right: 3%;
+    bottom: 10%;
+  }
+
   .searchOut-info {
     font-size: 0.9rem;
   }
@@ -96,6 +125,11 @@
 @media screen and (max-width: 411px) {
   .searchResultHeaderContainer > span {
     font-size: 0.9rem;
+  }
+  .flottingB {
+    right: 3%;
+    bottom: 8%;
+    font-size: 1rem;
   }
 }
 

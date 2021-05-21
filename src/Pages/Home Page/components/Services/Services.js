@@ -6,6 +6,7 @@ import { useInput } from "../../../../context/SearchContext";
 
 function Services() {
   const [services, setServices] = useState({});
+  const [buy, setBuy] = useState({});
   const { handleClickOnService } = useInput();
 
   useEffect(() => {
@@ -14,6 +15,18 @@ function Services() {
       .on("value", (snapshot) => {
         if (snapshot.val() != null) {
           setServices({
+            ...snapshot.val(),
+          });
+        }
+      });
+  }, []);
+
+  useEffect(() => {
+    db.ref()
+      .child("buySection")
+      .on("value", (snapshot) => {
+        if (snapshot.val() != null) {
+          setBuy({
             ...snapshot.val(),
           });
         }
@@ -37,6 +50,16 @@ function Services() {
                 <span>{services[id].title}</span>
               </button>
             </RLink>
+          );
+        })}
+        {Object.keys(buy).map((id) => {
+          return (
+            <a key={id} href={buy[id].url} rel="noreferrer" target="_blank">
+              <button className="services-box">
+                <img src={buy[id].image} alt="" />
+                <span>{buy[id].title}</span>
+              </button>
+            </a>
           );
         })}
       </div>
