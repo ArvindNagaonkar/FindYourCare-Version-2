@@ -8,7 +8,7 @@ export function useInput() {
 }
 
 function InputSearchProvider({ children }) {
-  const [cities, setCities] = useState({});
+  const [cities, setCities] = useState("");
   const [searchtext, setSearchtext] = useState("");
   const [suggest, setSuggest] = useState([]);
   const [resfound, setResfound] = useState(true);
@@ -27,10 +27,6 @@ function InputSearchProvider({ children }) {
   }, []);
 
   let citySuggestions = [];
-
-  function handleClickOnService(service) {
-    setClickOnService(service);
-  }
 
   const handleChange = (e) => {
     let searchval = e.target.value;
@@ -70,6 +66,13 @@ function InputSearchProvider({ children }) {
   Object.keys(cities).forEach((id) => {
     citySuggestions.push(cities[id]);
   });
+
+  if (clickOnService !== "" || searchtext !== "") {
+    localStorage.setItem("save", clickOnService);
+    localStorage.setItem("saveText", searchtext);
+  }
+  const ClickedService = localStorage.getItem("save");
+  const searchCity = localStorage.getItem("saveText");
 
   // ++++++++++++++ Search Resulte ++++++++++++++++++++++
 
@@ -3386,916 +3389,921 @@ function InputSearchProvider({ children }) {
   function getServices() {
     // +++++++++++++++++++++ Agra  +++++++++++++++++++++++++++++++++
 
-    if (clickOnService === "Helpline" && searchtext === "Agra") {
+    if (ClickedService === "Helpline" && searchCity === "Agra") {
       return Agra_Helpline;
     }
-    if (clickOnService === "Ambulance" && searchtext === "Agra") {
+    if (ClickedService === "Ambulance" && searchCity === "Agra") {
       return Agra_Ambulance;
     }
-    if (clickOnService === "Teleconsultation" && searchtext === "Agra") {
+    if (ClickedService === "Teleconsultation" && searchCity === "Agra") {
       return Agra_Teleconsultation;
     }
-    if (clickOnService === "Testing" && searchtext === "Agra") {
+    if (ClickedService === "Testing" && searchCity === "Agra") {
       return Agra_Testing;
     }
-    if (clickOnService === "Covid Care at Home" && searchtext === "Agra") {
+    if (ClickedService === "Covid Care at Home" && searchCity === "Agra") {
       return Agra_Covid_Care_at_Home;
     }
-    if (clickOnService === "Food/Med Delivery" && searchtext === "Agra") {
+    if (ClickedService === "Food/Med Delivery" && searchCity === "Agra") {
       return Agra_Food_Delivery;
     }
-    if (clickOnService === "Oxygen" && searchtext === "Agra") {
+    if (ClickedService === "Oxygen" && searchCity === "Agra") {
       return Agra_Oxygen;
     }
-    if (clickOnService === "Covid Medicines" && searchtext === "Agra") {
+    if (ClickedService === "Covid Medicines" && searchCity === "Agra") {
       return Agra_Covid_Medicines;
     }
     if (
-      clickOnService === "Volunteer Database/Groups" &&
-      searchtext === "Agra"
+      ClickedService === "Volunteer Database/Groups" &&
+      searchCity === "Agra"
     ) {
       return Agra_Volunteer_database;
     }
-    if (clickOnService === "Bereavement Services" && searchtext === "Agra") {
+    if (ClickedService === "Bereavement Services" && searchCity === "Agra") {
       return Agra_Bereavement_Services;
     }
-    if (clickOnService === "Plasma/Blood" && searchtext === "Agra") {
+    if (ClickedService === "Plasma/Blood" && searchCity === "Agra") {
       return Agra_Plasma_Blood;
     }
 
     // ++++++++++++++++++ Ahmedabad ++++++++++++++++++++++++++++++++
 
-    if (clickOnService === "Helpline" && searchtext === "Ahmedabad") {
+    if (ClickedService === "Helpline" && searchCity === "Ahmedabad") {
       return Ahmedabad_Helpline;
     }
-    if (clickOnService === "Ambulance" && searchtext === "Ahmedabad") {
+    if (ClickedService === "Ambulance" && searchCity === "Ahmedabad") {
       return Ahmedabad_Ambulance;
     }
-    if (clickOnService === "Teleconsultation" && searchtext === "Ahmedabad") {
+    if (ClickedService === "Teleconsultation" && searchCity === "Ahmedabad") {
       return Ahmedabad_Teleconsultation;
     }
-    if (clickOnService === "Testing" && searchtext === "Ahmedabad") {
+    if (ClickedService === "Testing" && searchCity === "Ahmedabad") {
       return Ahmedabad_Testing;
     }
-    if (clickOnService === "Covid Care at Home" && searchtext === "Ahmedabad") {
+    if (ClickedService === "Covid Care at Home" && searchCity === "Ahmedabad") {
       return Ahmedabad_Covid_Care_at_Home;
     }
-    if (clickOnService === "Food/Med Delivery" && searchtext === "Ahmedabad") {
+    if (ClickedService === "Food/Med Delivery" && searchCity === "Ahmedabad") {
       return Ahmedabad_Food_Delivery;
     }
-    if (clickOnService === "Oxygen" && searchtext === "Ahmedabad") {
+    if (ClickedService === "Oxygen" && searchCity === "Ahmedabad") {
       return Ahmedabad_Oxygen;
     }
-    if (clickOnService === "Covid Medicines" && searchtext === "Ahmedabad") {
+    if (ClickedService === "Covid Medicines" && searchCity === "Ahmedabad") {
       return Ahmedabad_Covid_Medicines;
     }
     if (
-      clickOnService === "Volunteer Database/Groups" &&
-      searchtext === "Ahmedabad"
+      ClickedService === "Volunteer Database/Groups" &&
+      searchCity === "Ahmedabad"
     ) {
       return Ahmedabad_Volunteer_database;
     }
     if (
-      clickOnService === "Bereavement Services" &&
-      searchtext === "Ahmedabad"
+      ClickedService === "Bereavement Services" &&
+      searchCity === "Ahmedabad"
     ) {
       return Ahmedabad_Bereavement_Services;
     }
-    if (clickOnService === "Plasma/Blood" && searchtext === "Ahmedabad") {
+    if (ClickedService === "Plasma/Blood" && searchCity === "Ahmedabad") {
       return Ahmedabad_Plasma_Blood;
     }
     // +++++++++++++++++++++++ Bangalore +++++++++++++++++++++++++++++++
 
-    if (clickOnService === "Helpline" && searchtext === "Bangalore") {
+    if (ClickedService === "Helpline" && searchCity === "Bangalore") {
       return Bangalore_Helpline;
     }
-    if (clickOnService === "Ambulance" && searchtext === "Bangalore") {
+    if (ClickedService === "Ambulance" && searchCity === "Bangalore") {
       return Bangalore_Ambulance;
     }
-    if (clickOnService === "Teleconsultation" && searchtext === "Bangalore") {
+    if (ClickedService === "Teleconsultation" && searchCity === "Bangalore") {
       return Bangalore_Teleconsultation;
     }
-    if (clickOnService === "Testing" && searchtext === "Bangalore") {
+    if (ClickedService === "Testing" && searchCity === "Bangalore") {
       return Bangalore_Testing;
     }
-    if (clickOnService === "Covid Care at Home" && searchtext === "Bangalore") {
+    if (ClickedService === "Covid Care at Home" && searchCity === "Bangalore") {
       return Bangalore_Covid_Care_at_Home;
     }
-    if (clickOnService === "Food/Med Delivery" && searchtext === "Bangalore") {
+    if (ClickedService === "Food/Med Delivery" && searchCity === "Bangalore") {
       return Bangalore_Food_Delivery;
     }
-    if (clickOnService === "Oxygen" && searchtext === "Bangalore") {
+    if (ClickedService === "Oxygen" && searchCity === "Bangalore") {
       return Bangalore_Oxygen;
     }
-    if (clickOnService === "Covid Medicines" && searchtext === "Bangalore") {
+    if (ClickedService === "Covid Medicines" && searchCity === "Bangalore") {
       return Bangalore_Covid_Medicines;
     }
     if (
-      clickOnService === "Volunteer Database/Groups" &&
-      searchtext === "Bangalore"
+      ClickedService === "Volunteer Database/Groups" &&
+      searchCity === "Bangalore"
     ) {
       return Bangalore_Volunteer_database;
     }
     if (
-      clickOnService === "Bereavement Services" &&
-      searchtext === "Bangalore"
+      ClickedService === "Bereavement Services" &&
+      searchCity === "Bangalore"
     ) {
       return Bangalore_Bereavement_Services;
     }
-    if (clickOnService === "Plasma/Blood" && searchtext === "Bangalore") {
+    if (ClickedService === "Plasma/Blood" && searchCity === "Bangalore") {
       return Bangalore_Plasma_Blood;
     }
 
     // +++++++++++++++++++++++ Bhopal +++++++++++++++++++++++++++++++
 
-    if (clickOnService === "Helpline" && searchtext === "Bhopal") {
+    if (ClickedService === "Helpline" && searchCity === "Bhopal") {
       return Bhopal_Helpline;
     }
-    if (clickOnService === "Ambulance" && searchtext === "Bhopal") {
+    if (ClickedService === "Ambulance" && searchCity === "Bhopal") {
       return Bhopal_Ambulance;
     }
-    if (clickOnService === "Teleconsultation" && searchtext === "Bhopal") {
+    if (ClickedService === "Teleconsultation" && searchCity === "Bhopal") {
       return Bhopal_Teleconsultation;
     }
-    if (clickOnService === "Testing" && searchtext === "Bhopal") {
+    if (ClickedService === "Testing" && searchCity === "Bhopal") {
       return Bhopal_Testing;
     }
-    if (clickOnService === "Covid Care at Home" && searchtext === "Bhopal") {
+    if (ClickedService === "Covid Care at Home" && searchCity === "Bhopal") {
       return Bhopal_Covid_Care_at_Home;
     }
-    if (clickOnService === "Food/Med Delivery" && searchtext === "Bhopal") {
+    if (ClickedService === "Food/Med Delivery" && searchCity === "Bhopal") {
       return Bhopal_Food_Delivery;
     }
-    if (clickOnService === "Oxygen" && searchtext === "Bhopal") {
+    if (ClickedService === "Oxygen" && searchCity === "Bhopal") {
       return Bhopal_Oxygen;
     }
-    if (clickOnService === "Covid Medicines" && searchtext === "Bhopal") {
+    if (ClickedService === "Covid Medicines" && searchCity === "Bhopal") {
       return Bhopal_Covid_Medicines;
     }
     if (
-      clickOnService === "Volunteer Database/Groups" &&
-      searchtext === "Bhopal"
+      ClickedService === "Volunteer Database/Groups" &&
+      searchCity === "Bhopal"
     ) {
       return Bhopal_Volunteer_database;
     }
-    if (clickOnService === "Bereavement Services" && searchtext === "Bhopal") {
+    if (ClickedService === "Bereavement Services" && searchCity === "Bhopal") {
       return Bhopal_Bereavement_Services;
     }
-    if (clickOnService === "Plasma/Blood" && searchtext === "Bhopal") {
+    if (ClickedService === "Plasma/Blood" && searchCity === "Bhopal") {
       return Bhopal_Plasma_Blood;
     }
 
     // +++++++++++++++++++++++ Chandigarh +++++++++++++++++++++++++++++++
 
-    if (clickOnService === "Helpline" && searchtext === "Chandigarh") {
+    if (ClickedService === "Helpline" && searchCity === "Chandigarh") {
       return Chandigarh_Helpline;
     }
-    if (clickOnService === "Ambulance" && searchtext === "Chandigarh") {
+    if (ClickedService === "Ambulance" && searchCity === "Chandigarh") {
       return Chandigarh_Ambulance;
     }
-    if (clickOnService === "Teleconsultation" && searchtext === "Chandigarh") {
+    if (ClickedService === "Teleconsultation" && searchCity === "Chandigarh") {
       return Chandigarh_Teleconsultation;
     }
-    if (clickOnService === "Testing" && searchtext === "Chandigarh") {
+    if (ClickedService === "Testing" && searchCity === "Chandigarh") {
       return Chandigarh_Testing;
     }
     if (
-      clickOnService === "Covid Care at Home" &&
-      searchtext === "Chandigarh"
+      ClickedService === "Covid Care at Home" &&
+      searchCity === "Chandigarh"
     ) {
       return Chandigarh_Covid_Care_at_Home;
     }
-    if (clickOnService === "Food/Med Delivery" && searchtext === "Chandigarh") {
+    if (ClickedService === "Food/Med Delivery" && searchCity === "Chandigarh") {
       return Chandigarh_Food_Delivery;
     }
-    if (clickOnService === "Oxygen" && searchtext === "Chandigarh") {
+    if (ClickedService === "Oxygen" && searchCity === "Chandigarh") {
       return Chandigarh_Oxygen;
     }
-    if (clickOnService === "Covid Medicines" && searchtext === "Chandigarh") {
+    if (ClickedService === "Covid Medicines" && searchCity === "Chandigarh") {
       return Chandigarh_Covid_Medicines;
     }
     if (
-      clickOnService === "Volunteer Database/Groups" &&
-      searchtext === "Chandigarh"
+      ClickedService === "Volunteer Database/Groups" &&
+      searchCity === "Chandigarh"
     ) {
       return Chandigarh_Volunteer_database;
     }
     if (
-      clickOnService === "Bereavement Services" &&
-      searchtext === "Chandigarh"
+      ClickedService === "Bereavement Services" &&
+      searchCity === "Chandigarh"
     ) {
       return Chandigarh_Bereavement_Services;
     }
-    if (clickOnService === "Plasma/Blood" && searchtext === "Chandigarh") {
+    if (ClickedService === "Plasma/Blood" && searchCity === "Chandigarh") {
       return Chandigarh_Plasma_Blood;
     }
 
     // +++++++++++++++++++++++ Delhi_NCR +++++++++++++++++++++++++++++++
 
-    if (clickOnService === "Helpline" && searchtext === "Delhi_NCR") {
+    if (ClickedService === "Helpline" && searchCity === "Delhi_NCR") {
       return Delhi_NCR_Helpline;
     }
-    if (clickOnService === "Ambulance" && searchtext === "Delhi_NCR") {
+    if (ClickedService === "Ambulance" && searchCity === "Delhi_NCR") {
       return Delhi_NCR_Ambulance;
     }
-    if (clickOnService === "Teleconsultation" && searchtext === "Delhi_NCR") {
+    if (ClickedService === "Teleconsultation" && searchCity === "Delhi_NCR") {
       return Delhi_NCR_Teleconsultation;
     }
-    if (clickOnService === "Testing" && searchtext === "Delhi_NCR") {
+    if (ClickedService === "Testing" && searchCity === "Delhi_NCR") {
       return Delhi_NCR_Testing;
     }
-    if (clickOnService === "Covid Care at Home" && searchtext === "Delhi_NCR") {
+    if (ClickedService === "Covid Care at Home" && searchCity === "Delhi_NCR") {
       return Delhi_NCR_Covid_Care_at_Home;
     }
-    if (clickOnService === "Food/Med Delivery" && searchtext === "Delhi_NCR") {
+    if (ClickedService === "Food/Med Delivery" && searchCity === "Delhi_NCR") {
       return Delhi_NCR_Food_Delivery;
     }
-    if (clickOnService === "Oxygen" && searchtext === "Delhi_NCR") {
+    if (ClickedService === "Oxygen" && searchCity === "Delhi_NCR") {
       return Delhi_NCR_Oxygen;
     }
-    if (clickOnService === "Covid Medicines" && searchtext === "Delhi_NCR") {
+    if (ClickedService === "Covid Medicines" && searchCity === "Delhi_NCR") {
       return Delhi_NCR_Covid_Medicines;
     }
     if (
-      clickOnService === "Volunteer Database/Groups" &&
-      searchtext === "Delhi_NCR"
+      ClickedService === "Volunteer Database/Groups" &&
+      searchCity === "Delhi_NCR"
     ) {
       return Delhi_NCR_Volunteer_database;
     }
     if (
-      clickOnService === "Bereavement Services" &&
-      searchtext === "Delhi_NCR"
+      ClickedService === "Bereavement Services" &&
+      searchCity === "Delhi_NCR"
     ) {
       return Delhi_NCR_Bereavement_Services;
     }
-    if (clickOnService === "Plasma/Blood" && searchtext === "Delhi_NCR") {
+    if (ClickedService === "Plasma/Blood" && searchCity === "Delhi_NCR") {
       return Delhi_NCR_Plasma_Blood;
     }
     // +++++++++++++++++++++++ Goa +++++++++++++++++++++++++++++++
 
-    if (clickOnService === "Helpline" && searchtext === "Goa") {
+    if (ClickedService === "Helpline" && searchCity === "Goa") {
       return Goa_Helpline;
     }
-    if (clickOnService === "Ambulance" && searchtext === "Goa") {
+    if (ClickedService === "Ambulance" && searchCity === "Goa") {
       return Goa_Ambulance;
     }
-    if (clickOnService === "Teleconsultation" && searchtext === "Goa") {
+    if (ClickedService === "Teleconsultation" && searchCity === "Goa") {
       return Goa_Teleconsultation;
     }
-    if (clickOnService === "Testing" && searchtext === "Goa") {
+    if (ClickedService === "Testing" && searchCity === "Goa") {
       return Goa_Testing;
     }
-    if (clickOnService === "Covid Care at Home" && searchtext === "Goa") {
+    if (ClickedService === "Covid Care at Home" && searchCity === "Goa") {
       return Goa_Covid_Care_at_Home;
     }
-    if (clickOnService === "Food/Med Delivery" && searchtext === "Goa") {
+    if (ClickedService === "Food/Med Delivery" && searchCity === "Goa") {
       return Goa_Food_Delivery;
     }
-    if (clickOnService === "Oxygen" && searchtext === "Goa") {
+    if (ClickedService === "Oxygen" && searchCity === "Goa") {
       return Goa_Oxygen;
     }
-    if (clickOnService === "Covid Medicines" && searchtext === "Goa") {
+    if (ClickedService === "Covid Medicines" && searchCity === "Goa") {
       return Goa_Covid_Medicines;
     }
     if (
-      clickOnService === "Volunteer Database/Groups" &&
-      searchtext === "Goa"
+      ClickedService === "Volunteer Database/Groups" &&
+      searchCity === "Goa"
     ) {
       return Goa_Volunteer_database;
     }
-    if (clickOnService === "Bereavement Services" && searchtext === "Goa") {
+    if (ClickedService === "Bereavement Services" && searchCity === "Goa") {
       return Goa_Bereavement_Services;
     }
-    if (clickOnService === "Plasma/Blood" && searchtext === "Goa") {
+    if (ClickedService === "Plasma/Blood" && searchCity === "Goa") {
       return Goa_Plasma_Blood;
     }
 
     // +++++++++++++++++++++++ Guntur +++++++++++++++++++++++++++++++
 
-    if (clickOnService === "Helpline" && searchtext === "Guntur") {
+    if (ClickedService === "Helpline" && searchCity === "Guntur") {
       return Guntur_Helpline;
     }
-    if (clickOnService === "Ambulance" && searchtext === "Guntur") {
+    if (ClickedService === "Ambulance" && searchCity === "Guntur") {
       return Guntur_Ambulance;
     }
-    if (clickOnService === "Teleconsultation" && searchtext === "Guntur") {
+    if (ClickedService === "Teleconsultation" && searchCity === "Guntur") {
       return Guntur_Teleconsultation;
     }
-    if (clickOnService === "Testing" && searchtext === "Guntur") {
+    if (ClickedService === "Testing" && searchCity === "Guntur") {
       return Guntur_Testing;
     }
-    if (clickOnService === "Covid Care at Home" && searchtext === "Guntur") {
+    if (ClickedService === "Covid Care at Home" && searchCity === "Guntur") {
       return Guntur_Covid_Care_at_Home;
     }
-    if (clickOnService === "Food/Med Delivery" && searchtext === "Guntur") {
+    if (ClickedService === "Food/Med Delivery" && searchCity === "Guntur") {
       return Guntur_Food_Delivery;
     }
-    if (clickOnService === "Oxygen" && searchtext === "Guntur") {
+    if (ClickedService === "Oxygen" && searchCity === "Guntur") {
       return Guntur_Oxygen;
     }
-    if (clickOnService === "Covid Medicines" && searchtext === "Guntur") {
+    if (ClickedService === "Covid Medicines" && searchCity === "Guntur") {
       return Guntur_Covid_Medicines;
     }
     if (
-      clickOnService === "Volunteer Database/Groups" &&
-      searchtext === "Guntur"
+      ClickedService === "Volunteer Database/Groups" &&
+      searchCity === "Guntur"
     ) {
       return Guntur_Volunteer_database;
     }
-    if (clickOnService === "Bereavement Services" && searchtext === "Guntur") {
+    if (ClickedService === "Bereavement Services" && searchCity === "Guntur") {
       return Guntur_Bereavement_Services;
     }
-    if (clickOnService === "Plasma/Blood" && searchtext === "Guntur") {
+    if (ClickedService === "Plasma/Blood" && searchCity === "Guntur") {
       return Guntur_Plasma_Blood;
     }
 
     // +++++++++++++++++++++++ Guwahati +++++++++++++++++++++++++++++++
 
-    if (clickOnService === "Helpline" && searchtext === "Guwahati") {
+    if (ClickedService === "Helpline" && searchCity === "Guwahati") {
       return Guwahati_Helpline;
     }
-    if (clickOnService === "Ambulance" && searchtext === "Guwahati") {
+    if (ClickedService === "Ambulance" && searchCity === "Guwahati") {
       return Guwahati_Ambulance;
     }
-    if (clickOnService === "Teleconsultation" && searchtext === "Guwahati") {
+    if (ClickedService === "Teleconsultation" && searchCity === "Guwahati") {
       return Guwahati_Teleconsultation;
     }
-    if (clickOnService === "Testing" && searchtext === "Guwahati") {
+    if (ClickedService === "Testing" && searchCity === "Guwahati") {
       return Guwahati_Testing;
     }
-    if (clickOnService === "Covid Care at Home" && searchtext === "Guwahati") {
+    if (ClickedService === "Covid Care at Home" && searchCity === "Guwahati") {
       return Guwahati_Covid_Care_at_Home;
     }
-    if (clickOnService === "Food/Med Delivery" && searchtext === "Guwahati") {
+    if (ClickedService === "Food/Med Delivery" && searchCity === "Guwahati") {
       return Guwahati_Food_Delivery;
     }
-    if (clickOnService === "Oxygen" && searchtext === "Guwahati") {
+    if (ClickedService === "Oxygen" && searchCity === "Guwahati") {
       return Guwahati_Oxygen;
     }
-    if (clickOnService === "Covid Medicines" && searchtext === "Guwahati") {
+    if (ClickedService === "Covid Medicines" && searchCity === "Guwahati") {
       return Guwahati_Covid_Medicines;
     }
     if (
-      clickOnService === "Volunteer Database/Groups" &&
-      searchtext === "Guwahati"
+      ClickedService === "Volunteer Database/Groups" &&
+      searchCity === "Guwahati"
     ) {
       return Guwahati_Volunteer_database;
     }
     if (
-      clickOnService === "Bereavement Services" &&
-      searchtext === "Guwahati"
+      ClickedService === "Bereavement Services" &&
+      searchCity === "Guwahati"
     ) {
       return Guwahati_Bereavement_Services;
     }
-    if (clickOnService === "Plasma/Blood" && searchtext === "Guwahati") {
+    if (ClickedService === "Plasma/Blood" && searchCity === "Guwahati") {
       return Guwahati_Plasma_Blood;
     }
 
     // +++++++++++++++++++++++ Hyderabad +++++++++++++++++++++++++++++++
 
-    if (clickOnService === "Helpline" && searchtext === "Hyderabad") {
+    if (ClickedService === "Helpline" && searchCity === "Hyderabad") {
       return Hyderabad_Helpline;
     }
-    if (clickOnService === "Ambulance" && searchtext === "Hyderabad") {
+    if (ClickedService === "Ambulance" && searchCity === "Hyderabad") {
       return Hyderabad_Ambulance;
     }
-    if (clickOnService === "Teleconsultation" && searchtext === "Hyderabad") {
+    if (ClickedService === "Teleconsultation" && searchCity === "Hyderabad") {
       return Hyderabad_Teleconsultation;
     }
-    if (clickOnService === "Testing" && searchtext === "Hyderabad") {
+    if (ClickedService === "Testing" && searchCity === "Hyderabad") {
       return Hyderabad_Testing;
     }
-    if (clickOnService === "Covid Care at Home" && searchtext === "Hyderabad") {
+    if (ClickedService === "Covid Care at Home" && searchCity === "Hyderabad") {
       return Hyderabad_Covid_Care_at_Home;
     }
-    if (clickOnService === "Food/Med Delivery" && searchtext === "Hyderabad") {
+    if (ClickedService === "Food/Med Delivery" && searchCity === "Hyderabad") {
       return Hyderabad_Food_Delivery;
     }
-    if (clickOnService === "Oxygen" && searchtext === "Hyderabad") {
+    if (ClickedService === "Oxygen" && searchCity === "Hyderabad") {
       return Hyderabad_Oxygen;
     }
-    if (clickOnService === "Covid Medicines" && searchtext === "Hyderabad") {
+    if (ClickedService === "Covid Medicines" && searchCity === "Hyderabad") {
       return Hyderabad_Covid_Medicines;
     }
     if (
-      clickOnService === "Volunteer Database/Groups" &&
-      searchtext === "Hyderabad"
+      ClickedService === "Volunteer Database/Groups" &&
+      searchCity === "Hyderabad"
     ) {
       return Hyderabad_Volunteer_database;
     }
     if (
-      clickOnService === "Bereavement Services" &&
-      searchtext === "Hyderabad"
+      ClickedService === "Bereavement Services" &&
+      searchCity === "Hyderabad"
     ) {
       return Hyderabad_Bereavement_Services;
     }
-    if (clickOnService === "Plasma/Blood" && searchtext === "Hyderabad") {
+    if (ClickedService === "Plasma/Blood" && searchCity === "Hyderabad") {
       return Hyderabad_Plasma_Blood;
     }
 
     // +++++++++++++++++++++++ Indore +++++++++++++++++++++++++++++++
 
-    if (clickOnService === "Helpline" && searchtext === "Indore") {
+    if (ClickedService === "Helpline" && searchCity === "Indore") {
       return Indore_Helpline;
     }
-    if (clickOnService === "Ambulance" && searchtext === "Indore") {
+    if (ClickedService === "Ambulance" && searchCity === "Indore") {
       return Indore_Ambulance;
     }
-    if (clickOnService === "Teleconsultation" && searchtext === "Indore") {
+    if (ClickedService === "Teleconsultation" && searchCity === "Indore") {
       return Indore_Teleconsultation;
     }
-    if (clickOnService === "Testing" && searchtext === "Indore") {
+    if (ClickedService === "Testing" && searchCity === "Indore") {
       return Indore_Testing;
     }
-    if (clickOnService === "Covid Care at Home" && searchtext === "Indore") {
+    if (ClickedService === "Covid Care at Home" && searchCity === "Indore") {
       return Indore_Covid_Care_at_Home;
     }
-    if (clickOnService === "Food/Med Delivery" && searchtext === "Indore") {
+    if (ClickedService === "Food/Med Delivery" && searchCity === "Indore") {
       return Indore_Food_Delivery;
     }
-    if (clickOnService === "Oxygen" && searchtext === "Indore") {
+    if (ClickedService === "Oxygen" && searchCity === "Indore") {
       return Indore_Oxygen;
     }
-    if (clickOnService === "Covid Medicines" && searchtext === "Indore") {
+    if (ClickedService === "Covid Medicines" && searchCity === "Indore") {
       return Indore_Covid_Medicines;
     }
     if (
-      clickOnService === "Volunteer Database/Groups" &&
-      searchtext === "Indore"
+      ClickedService === "Volunteer Database/Groups" &&
+      searchCity === "Indore"
     ) {
       return Indore_Volunteer_database;
     }
-    if (clickOnService === "Bereavement Services" && searchtext === "Indore") {
+    if (ClickedService === "Bereavement Services" && searchCity === "Indore") {
       return Indore_Bereavement_Services;
     }
-    if (clickOnService === "Plasma/Blood" && searchtext === "Indore") {
+    if (ClickedService === "Plasma/Blood" && searchCity === "Indore") {
       return Indore_Plasma_Blood;
     }
 
     // +++++++++++++++++++++++ Jaipur +++++++++++++++++++++++++++++++
 
-    if (clickOnService === "Helpline" && searchtext === "Jaipur") {
+    if (ClickedService === "Helpline" && searchCity === "Jaipur") {
       return Jaipur_Helpline;
     }
-    if (clickOnService === "Ambulance" && searchtext === "Jaipur") {
+    if (ClickedService === "Ambulance" && searchCity === "Jaipur") {
       return Jaipur_Ambulance;
     }
-    if (clickOnService === "Teleconsultation" && searchtext === "Jaipur") {
+    if (ClickedService === "Teleconsultation" && searchCity === "Jaipur") {
       return Jaipur_Teleconsultation;
     }
-    if (clickOnService === "Testing" && searchtext === "Jaipur") {
+    if (ClickedService === "Testing" && searchCity === "Jaipur") {
       return Jaipur_Testing;
     }
-    if (clickOnService === "Covid Care at Home" && searchtext === "Jaipur") {
+    if (ClickedService === "Covid Care at Home" && searchCity === "Jaipur") {
       return Jaipur_Covid_Care_at_Home;
     }
-    if (clickOnService === "Food/Med Delivery" && searchtext === "Jaipur") {
+    if (ClickedService === "Food/Med Delivery" && searchCity === "Jaipur") {
       return Jaipur_Food_Delivery;
     }
-    if (clickOnService === "Oxygen" && searchtext === "Jaipur") {
+    if (ClickedService === "Oxygen" && searchCity === "Jaipur") {
       return Jaipur_Oxygen;
     }
-    if (clickOnService === "Covid Medicines" && searchtext === "Jaipur") {
+    if (ClickedService === "Covid Medicines" && searchCity === "Jaipur") {
       return Jaipur_Covid_Medicines;
     }
     if (
-      clickOnService === "Volunteer Database/Groups" &&
-      searchtext === "Jaipur"
+      ClickedService === "Volunteer Database/Groups" &&
+      searchCity === "Jaipur"
     ) {
       return Jaipur_Volunteer_database;
     }
-    if (clickOnService === "Bereavement Services" && searchtext === "Jaipur") {
+    if (ClickedService === "Bereavement Services" && searchCity === "Jaipur") {
       return Jaipur_Bereavement_Services;
     }
-    if (clickOnService === "Plasma/Blood" && searchtext === "Jaipur") {
+    if (ClickedService === "Plasma/Blood" && searchCity === "Jaipur") {
       return Jaipur_Plasma_Blood;
     }
 
     // +++++++++++++++++++++++ Kolkata +++++++++++++++++++++++++++++++
 
-    if (clickOnService === "Helpline" && searchtext === "Kolkata") {
+    if (ClickedService === "Helpline" && searchCity === "Kolkata") {
       return Kolkata_Helpline;
     }
-    if (clickOnService === "Ambulance" && searchtext === "Kolkata") {
+    if (ClickedService === "Ambulance" && searchCity === "Kolkata") {
       return Kolkata_Ambulance;
     }
-    if (clickOnService === "Teleconsultation" && searchtext === "Kolkata") {
+    if (ClickedService === "Teleconsultation" && searchCity === "Kolkata") {
       return Kolkata_Teleconsultation;
     }
-    if (clickOnService === "Testing" && searchtext === "Kolkata") {
+    if (ClickedService === "Testing" && searchCity === "Kolkata") {
       return Kolkata_Testing;
     }
-    if (clickOnService === "Covid Care at Home" && searchtext === "Kolkata") {
+    if (ClickedService === "Covid Care at Home" && searchCity === "Kolkata") {
       return Kolkata_Covid_Care_at_Home;
     }
-    if (clickOnService === "Food/Med Delivery" && searchtext === "Kolkata") {
+    if (ClickedService === "Food/Med Delivery" && searchCity === "Kolkata") {
       return Kolkata_Food_Delivery;
     }
-    if (clickOnService === "Oxygen" && searchtext === "Kolkata") {
+    if (ClickedService === "Oxygen" && searchCity === "Kolkata") {
       return Kolkata_Oxygen;
     }
-    if (clickOnService === "Covid Medicines" && searchtext === "Kolkata") {
+    if (ClickedService === "Covid Medicines" && searchCity === "Kolkata") {
       return Kolkata_Covid_Medicines;
     }
     if (
-      clickOnService === "Volunteer Database/Groups" &&
-      searchtext === "Kolkata"
+      ClickedService === "Volunteer Database/Groups" &&
+      searchCity === "Kolkata"
     ) {
       return Kolkata_Volunteer_database;
     }
-    if (clickOnService === "Bereavement Services" && searchtext === "Kolkata") {
+    if (ClickedService === "Bereavement Services" && searchCity === "Kolkata") {
       return Kolkata_Bereavement_Services;
     }
-    if (clickOnService === "Plasma/Blood" && searchtext === "Kolkata") {
+    if (ClickedService === "Plasma/Blood" && searchCity === "Kolkata") {
       return Kolkata_Plasma_Blood;
     }
 
     // +++++++++++++++++++++++ Lucknow +++++++++++++++++++++++++++++++
 
-    if (clickOnService === "Helpline" && searchtext === "Lucknow") {
+    if (ClickedService === "Helpline" && searchCity === "Lucknow") {
       return Lucknow_Helpline;
     }
-    if (clickOnService === "Ambulance" && searchtext === "Lucknow") {
+    if (ClickedService === "Ambulance" && searchCity === "Lucknow") {
       return Lucknow_Ambulance;
     }
-    if (clickOnService === "Teleconsultation" && searchtext === "Lucknow") {
+    if (ClickedService === "Teleconsultation" && searchCity === "Lucknow") {
       return Lucknow_Teleconsultation;
     }
-    if (clickOnService === "Testing" && searchtext === "Lucknow") {
+    if (ClickedService === "Testing" && searchCity === "Lucknow") {
       return Lucknow_Testing;
     }
-    if (clickOnService === "Covid Care at Home" && searchtext === "Lucknow") {
+    if (ClickedService === "Covid Care at Home" && searchCity === "Lucknow") {
       return Lucknow_Covid_Care_at_Home;
     }
-    if (clickOnService === "Food/Med Delivery" && searchtext === "Lucknow") {
+    if (ClickedService === "Food/Med Delivery" && searchCity === "Lucknow") {
       return Lucknow_Food_Delivery;
     }
-    if (clickOnService === "Oxygen" && searchtext === "Lucknow") {
+    if (ClickedService === "Oxygen" && searchCity === "Lucknow") {
       return Lucknow_Oxygen;
     }
-    if (clickOnService === "Covid Medicines" && searchtext === "Lucknow") {
+    if (ClickedService === "Covid Medicines" && searchCity === "Lucknow") {
       return Lucknow_Covid_Medicines;
     }
     if (
-      clickOnService === "Volunteer Database/Groups" &&
-      searchtext === "Lucknow"
+      ClickedService === "Volunteer Database/Groups" &&
+      searchCity === "Lucknow"
     ) {
       return Lucknow_Volunteer_database;
     }
-    if (clickOnService === "Bereavement Services" && searchtext === "Lucknow") {
+    if (ClickedService === "Bereavement Services" && searchCity === "Lucknow") {
       return Lucknow_Bereavement_Services;
     }
-    if (clickOnService === "Plasma/Blood" && searchtext === "Lucknow") {
+    if (ClickedService === "Plasma/Blood" && searchCity === "Lucknow") {
       return Lucknow_Plasma_Blood;
     }
 
     // +++++++++++++++++++++++ Mumbai +++++++++++++++++++++++++++++++
 
     if (
-      (clickOnService === "Helpline" && searchtext === "Mumbai") ||
-      clickOnService === "Helpline"
+      (ClickedService === "Helpline" && searchCity === "Mumbai") ||
+      ClickedService === "Helpline"
     ) {
       return Mumbai_Helpline;
     }
     if (
-      (clickOnService === "Ambulance" && searchtext === "Mumbai") ||
-      clickOnService === "Ambulance"
+      (ClickedService === "Ambulance" && searchCity === "Mumbai") ||
+      ClickedService === "Ambulance"
     ) {
       return Mumbai_Ambulance;
     }
     if (
-      (clickOnService === "Teleconsultation" && searchtext === "Mumbai") ||
-      clickOnService === "Teleconsultation"
+      (ClickedService === "Teleconsultation" && searchCity === "Mumbai") ||
+      ClickedService === "Teleconsultation"
     ) {
       return Mumbai_Teleconsultation;
     }
     if (
-      (clickOnService === "Testing" && searchtext === "Mumbai") ||
-      clickOnService === "Testing"
+      (ClickedService === "Testing" && searchCity === "Mumbai") ||
+      ClickedService === "Testing"
     ) {
       return Mumbai_Testing;
     }
     if (
-      (clickOnService === "Covid Care at Home" && searchtext === "Mumbai") ||
-      clickOnService === "Covid Care at Home"
+      (ClickedService === "Covid Care at Home" && searchCity === "Mumbai") ||
+      ClickedService === "Covid Care at Home"
     ) {
       return Mumbai_Covid_Care_at_Home;
     }
     if (
-      (clickOnService === "Food/Med Delivery" && searchtext === "Mumbai") ||
-      clickOnService === "Food/Med Delivery"
+      (ClickedService === "Food/Med Delivery" && searchCity === "Mumbai") ||
+      ClickedService === "Food/Med Delivery"
     ) {
       return Mumbai_Food_Delivery;
     }
     if (
-      (clickOnService === "Oxygen" && searchtext === "Mumbai") ||
-      clickOnService === "Oxygen"
+      (ClickedService === "Oxygen" && searchCity === "Mumbai") ||
+      ClickedService === "Oxygen"
     ) {
       return Mumbai_Oxygen;
     }
     if (
-      (clickOnService === "Covid Medicines" && searchtext === "Mumbai") ||
-      clickOnService === "Covid Medicines"
+      (ClickedService === "Covid Medicines" && searchCity === "Mumbai") ||
+      ClickedService === "Covid Medicines"
     ) {
       return Mumbai_Covid_Medicines;
     }
     if (
-      (clickOnService === "Volunteer Database/Groups" &&
-        searchtext === "Mumbai") ||
-      clickOnService === "Volunteer Database/Groups"
+      (ClickedService === "Volunteer Database/Groups" &&
+        searchCity === "Mumbai") ||
+      ClickedService === "Volunteer Database/Groups"
     ) {
       return Mumbai_Volunteer_database;
     }
     if (
-      (clickOnService === "Bereavement Services" && searchtext === "Mumbai") ||
-      clickOnService === "Bereavement Services"
+      (ClickedService === "Bereavement Services" && searchCity === "Mumbai") ||
+      ClickedService === "Bereavement Services"
     ) {
       return Mumbai_Bereavement_Services;
     }
     if (
-      (clickOnService === "Plasma/Blood" && searchtext === "Mumbai") ||
-      clickOnService === "Plasma/Blood"
+      (ClickedService === "Plasma/Blood" && searchCity === "Mumbai") ||
+      ClickedService === "Plasma/Blood"
     ) {
       return Mumbai_Plasma_Blood;
     }
 
     // +++++++++++++++++++++++ Mysore +++++++++++++++++++++++++++++++
 
-    if (clickOnService === "Helpline" && searchtext === "Mysore") {
+    if (ClickedService === "Helpline" && searchCity === "Mysore") {
       return Mysore_Helpline;
     }
-    if (clickOnService === "Ambulance" && searchtext === "Mysore") {
+    if (ClickedService === "Ambulance" && searchCity === "Mysore") {
       return Mysore_Ambulance;
     }
-    if (clickOnService === "Teleconsultation" && searchtext === "Mysore") {
+    if (ClickedService === "Teleconsultation" && searchCity === "Mysore") {
       return Mysore_Teleconsultation;
     }
-    if (clickOnService === "Testing" && searchtext === "Mysore") {
+    if (ClickedService === "Testing" && searchCity === "Mysore") {
       return Mysore_Testing;
     }
-    if (clickOnService === "Covid Care at Home" && searchtext === "Mysore") {
+    if (ClickedService === "Covid Care at Home" && searchCity === "Mysore") {
       return Mysore_Covid_Care_at_Home;
     }
-    if (clickOnService === "Food/Med Delivery" && searchtext === "Mysore") {
+    if (ClickedService === "Food/Med Delivery" && searchCity === "Mysore") {
       return Mysore_Food_Delivery;
     }
-    if (clickOnService === "Oxygen" && searchtext === "Mysore") {
+    if (ClickedService === "Oxygen" && searchCity === "Mysore") {
       return Mysore_Oxygen;
     }
-    if (clickOnService === "Covid Medicines" && searchtext === "Mysore") {
+    if (ClickedService === "Covid Medicines" && searchCity === "Mysore") {
       return Mysore_Covid_Medicines;
     }
     if (
-      clickOnService === "Volunteer Database/Groups" &&
-      searchtext === "Mysore"
+      ClickedService === "Volunteer Database/Groups" &&
+      searchCity === "Mysore"
     ) {
       return Mysore_Volunteer_database;
     }
-    if (clickOnService === "Bereavement Services" && searchtext === "Mysore") {
+    if (ClickedService === "Bereavement Services" && searchCity === "Mysore") {
       return Mysore_Bereavement_Services;
     }
-    if (clickOnService === "Plasma/Blood" && searchtext === "Mysore") {
+    if (ClickedService === "Plasma/Blood" && searchCity === "Mysore") {
       return Mysore_Plasma_Blood;
     }
 
     // +++++++++++++++++++++++ Nagpur +++++++++++++++++++++++++++++++
 
-    if (clickOnService === "Helpline" && searchtext === "Nagpur") {
+    if (ClickedService === "Helpline" && searchCity === "Nagpur") {
       return Nagpur_Helpline;
     }
-    if (clickOnService === "Ambulance" && searchtext === "Nagpur") {
+    if (ClickedService === "Ambulance" && searchCity === "Nagpur") {
       return Nagpur_Ambulance;
     }
-    if (clickOnService === "Teleconsultation" && searchtext === "Nagpur") {
+    if (ClickedService === "Teleconsultation" && searchCity === "Nagpur") {
       return Nagpur_Teleconsultation;
     }
-    if (clickOnService === "Testing" && searchtext === "Nagpur") {
+    if (ClickedService === "Testing" && searchCity === "Nagpur") {
       return Nagpur_Testing;
     }
-    if (clickOnService === "Covid Care at Home" && searchtext === "Nagpur") {
+    if (ClickedService === "Covid Care at Home" && searchCity === "Nagpur") {
       return Nagpur_Covid_Care_at_Home;
     }
-    if (clickOnService === "Food/Med Delivery" && searchtext === "Nagpur") {
+    if (ClickedService === "Food/Med Delivery" && searchCity === "Nagpur") {
       return Nagpur_Food_Delivery;
     }
-    if (clickOnService === "Oxygen" && searchtext === "Nagpur") {
+    if (ClickedService === "Oxygen" && searchCity === "Nagpur") {
       return Nagpur_Oxygen;
     }
-    if (clickOnService === "Covid Medicines" && searchtext === "Nagpur") {
+    if (ClickedService === "Covid Medicines" && searchCity === "Nagpur") {
       return Nagpur_Covid_Medicines;
     }
     if (
-      clickOnService === "Volunteer Database/Groups" &&
-      searchtext === "Nagpur"
+      ClickedService === "Volunteer Database/Groups" &&
+      searchCity === "Nagpur"
     ) {
       return Nagpur_Volunteer_database;
     }
-    if (clickOnService === "Bereavement Services" && searchtext === "Nagpur") {
+    if (ClickedService === "Bereavement Services" && searchCity === "Nagpur") {
       return Nagpur_Bereavement_Services;
     }
-    if (clickOnService === "Plasma/Blood" && searchtext === "Nagpur") {
+    if (ClickedService === "Plasma/Blood" && searchCity === "Nagpur") {
       return Nagpur_Plasma_Blood;
     }
 
     // +++++++++++++++++++++++ Patna +++++++++++++++++++++++++++++++
 
-    if (clickOnService === "Helpline" && searchtext === "Patna") {
+    if (ClickedService === "Helpline" && searchCity === "Patna") {
       return Patna_Helpline;
     }
-    if (clickOnService === "Ambulance" && searchtext === "Patna") {
+    if (ClickedService === "Ambulance" && searchCity === "Patna") {
       return Patna_Ambulance;
     }
-    if (clickOnService === "Teleconsultation" && searchtext === "Patna") {
+    if (ClickedService === "Teleconsultation" && searchCity === "Patna") {
       return Patna_Teleconsultation;
     }
-    if (clickOnService === "Testing" && searchtext === "Patna") {
+    if (ClickedService === "Testing" && searchCity === "Patna") {
       return Patna_Testing;
     }
-    if (clickOnService === "Covid Care at Home" && searchtext === "Patna") {
+    if (ClickedService === "Covid Care at Home" && searchCity === "Patna") {
       return Patna_Covid_Care_at_Home;
     }
-    if (clickOnService === "Food/Med Delivery" && searchtext === "Patna") {
+    if (ClickedService === "Food/Med Delivery" && searchCity === "Patna") {
       return Patna_Food_Delivery;
     }
-    if (clickOnService === "Oxygen" && searchtext === "Patna") {
+    if (ClickedService === "Oxygen" && searchCity === "Patna") {
       return Patna_Oxygen;
     }
-    if (clickOnService === "Covid Medicines" && searchtext === "Patna") {
+    if (ClickedService === "Covid Medicines" && searchCity === "Patna") {
       return Patna_Covid_Medicines;
     }
     if (
-      clickOnService === "Volunteer Database/Groups" &&
-      searchtext === "Patna"
+      ClickedService === "Volunteer Database/Groups" &&
+      searchCity === "Patna"
     ) {
       return Patna_Volunteer_database;
     }
-    if (clickOnService === "Bereavement Services" && searchtext === "Patna") {
+    if (ClickedService === "Bereavement Services" && searchCity === "Patna") {
       return Patna_Bereavement_Services;
     }
-    if (clickOnService === "Plasma/Blood" && searchtext === "Patna") {
+    if (ClickedService === "Plasma/Blood" && searchCity === "Patna") {
       return Patna_Plasma_Blood;
     }
 
     // +++++++++++++++++++++++ Pune +++++++++++++++++++++++++++++++
 
-    if (clickOnService === "Helpline" && searchtext === "Pune") {
+    if (ClickedService === "Helpline" && searchCity === "Pune") {
       return Pune_Helpline;
     }
-    if (clickOnService === "Ambulance" && searchtext === "Pune") {
+    if (ClickedService === "Ambulance" && searchCity === "Pune") {
       return Pune_Ambulance;
     }
-    if (clickOnService === "Teleconsultation" && searchtext === "Pune") {
+    if (ClickedService === "Teleconsultation" && searchCity === "Pune") {
       return Pune_Teleconsultation;
     }
-    if (clickOnService === "Testing" && searchtext === "Pune") {
+    if (ClickedService === "Testing" && searchCity === "Pune") {
       return Pune_Testing;
     }
-    if (clickOnService === "Covid Care at Home" && searchtext === "Pune") {
+    if (ClickedService === "Covid Care at Home" && searchCity === "Pune") {
       return Pune_Covid_Care_at_Home;
     }
-    if (clickOnService === "Food/Med Delivery" && searchtext === "Pune") {
+    if (ClickedService === "Food/Med Delivery" && searchCity === "Pune") {
       return Pune_Food_Delivery;
     }
-    if (clickOnService === "Oxygen" && searchtext === "Pune") {
+    if (ClickedService === "Oxygen" && searchCity === "Pune") {
       return Pune_Oxygen;
     }
-    if (clickOnService === "Covid Medicines" && searchtext === "Pune") {
+    if (ClickedService === "Covid Medicines" && searchCity === "Pune") {
       return Pune_Covid_Medicines;
     }
     if (
-      clickOnService === "Volunteer Database/Groups" &&
-      searchtext === "Pune"
+      ClickedService === "Volunteer Database/Groups" &&
+      searchCity === "Pune"
     ) {
       return Pune_Volunteer_database;
     }
-    if (clickOnService === "Bereavement Services" && searchtext === "Pune") {
+    if (ClickedService === "Bereavement Services" && searchCity === "Pune") {
       return Pune_Bereavement_Services;
     }
-    if (clickOnService === "Plasma/Blood" && searchtext === "Pune") {
+    if (ClickedService === "Plasma/Blood" && searchCity === "Pune") {
       return Pune_Plasma_Blood;
     }
 
     // +++++++++++++++++++++++ Ranchi +++++++++++++++++++++++++++++++
 
-    if (clickOnService === "Helpline" && searchtext === "Ranchi") {
+    if (ClickedService === "Helpline" && searchCity === "Ranchi") {
       return Ranchi_Helpline;
     }
-    if (clickOnService === "Ambulance" && searchtext === "Ranchi") {
+    if (ClickedService === "Ambulance" && searchCity === "Ranchi") {
       return Ranchi_Ambulance;
     }
-    if (clickOnService === "Teleconsultation" && searchtext === "Ranchi") {
+    if (ClickedService === "Teleconsultation" && searchCity === "Ranchi") {
       return Ranchi_Teleconsultation;
     }
-    if (clickOnService === "Testing" && searchtext === "Ranchi") {
+    if (ClickedService === "Testing" && searchCity === "Ranchi") {
       return Ranchi_Testing;
     }
-    if (clickOnService === "Covid Care at Home" && searchtext === "Ranchi") {
+    if (ClickedService === "Covid Care at Home" && searchCity === "Ranchi") {
       return Ranchi_Covid_Care_at_Home;
     }
-    if (clickOnService === "Food/Med Delivery" && searchtext === "Ranchi") {
+    if (ClickedService === "Food/Med Delivery" && searchCity === "Ranchi") {
       return Ranchi_Food_Delivery;
     }
-    if (clickOnService === "Oxygen" && searchtext === "Ranchi") {
+    if (ClickedService === "Oxygen" && searchCity === "Ranchi") {
       return Ranchi_Oxygen;
     }
-    if (clickOnService === "Covid Medicines" && searchtext === "Ranchi") {
+    if (ClickedService === "Covid Medicines" && searchCity === "Ranchi") {
       return Ranchi_Covid_Medicines;
     }
     if (
-      clickOnService === "Volunteer Database/Groups" &&
-      searchtext === "Ranchi"
+      ClickedService === "Volunteer Database/Groups" &&
+      searchCity === "Ranchi"
     ) {
       return Ranchi_Volunteer_database;
     }
-    if (clickOnService === "Bereavement Services" && searchtext === "Ranchi") {
+    if (ClickedService === "Bereavement Services" && searchCity === "Ranchi") {
       return Ranchi_Bereavement_Services;
     }
-    if (clickOnService === "Plasma/Blood" && searchtext === "Ranchi") {
+    if (ClickedService === "Plasma/Blood" && searchCity === "Ranchi") {
       return Ranchi_Plasma_Blood;
     }
 
     // +++++++++++++++++++++++ Varansi +++++++++++++++++++++++++++++++
 
-    if (clickOnService === "Helpline" && searchtext === "Varansi") {
+    if (ClickedService === "Helpline" && searchCity === "Varansi") {
       return Varansi_Helpline;
     }
-    if (clickOnService === "Ambulance" && searchtext === "Varansi") {
+    if (ClickedService === "Ambulance" && searchCity === "Varansi") {
       return Varansi_Ambulance;
     }
-    if (clickOnService === "Teleconsultation" && searchtext === "Varansi") {
+    if (ClickedService === "Teleconsultation" && searchCity === "Varansi") {
       return Varansi_Teleconsultation;
     }
-    if (clickOnService === "Testing" && searchtext === "Varansi") {
+    if (ClickedService === "Testing" && searchCity === "Varansi") {
       return Varansi_Testing;
     }
-    if (clickOnService === "Covid Care at Home" && searchtext === "Varansi") {
+    if (ClickedService === "Covid Care at Home" && searchCity === "Varansi") {
       return Varansi_Covid_Care_at_Home;
     }
-    if (clickOnService === "Food/Med Delivery" && searchtext === "Varansi") {
+    if (ClickedService === "Food/Med Delivery" && searchCity === "Varansi") {
       return Varansi_Food_Delivery;
     }
-    if (clickOnService === "Oxygen" && searchtext === "Varansi") {
+    if (ClickedService === "Oxygen" && searchCity === "Varansi") {
       return Varansi_Oxygen;
     }
-    if (clickOnService === "Covid Medicines" && searchtext === "Varansi") {
+    if (ClickedService === "Covid Medicines" && searchCity === "Varansi") {
       return Varansi_Covid_Medicines;
     }
     if (
-      clickOnService === "Volunteer Database/Groups" &&
-      searchtext === "Varansi"
+      ClickedService === "Volunteer Database/Groups" &&
+      searchCity === "Varansi"
     ) {
       return Varansi_Volunteer_database;
     }
-    if (clickOnService === "Bereavement Services" && searchtext === "Varansi") {
+    if (ClickedService === "Bereavement Services" && searchCity === "Varansi") {
       return Varansi_Bereavement_Services;
     }
-    if (clickOnService === "Plasma/Blood" && searchtext === "Varansi") {
+    if (ClickedService === "Plasma/Blood" && searchCity === "Varansi") {
       return Varansi_Plasma_Blood;
     }
 
     // +++++++++++++++++++++++ Vizag +++++++++++++++++++++++++++++++
 
-    if (clickOnService === "Helpline" && searchtext === "Vizag") {
+    if (ClickedService === "Helpline" && searchCity === "Vizag") {
       return Vizag_Helpline;
     }
-    if (clickOnService === "Ambulance" && searchtext === "Vizag") {
+    if (ClickedService === "Ambulance" && searchCity === "Vizag") {
       return Vizag_Ambulance;
     }
-    if (clickOnService === "Teleconsultation" && searchtext === "Vizag") {
+    if (ClickedService === "Teleconsultation" && searchCity === "Vizag") {
       return Vizag_Teleconsultation;
     }
-    if (clickOnService === "Testing" && searchtext === "Vizag") {
+    if (ClickedService === "Testing" && searchCity === "Vizag") {
       return Vizag_Testing;
     }
-    if (clickOnService === "Covid Care at Home" && searchtext === "Vizag") {
+    if (ClickedService === "Covid Care at Home" && searchCity === "Vizag") {
       return Vizag_Covid_Care_at_Home;
     }
-    if (clickOnService === "Food/Med Delivery" && searchtext === "Vizag") {
+    if (ClickedService === "Food/Med Delivery" && searchCity === "Vizag") {
       return Vizag_Food_Delivery;
     }
-    if (clickOnService === "Oxygen" && searchtext === "Vizag") {
+    if (ClickedService === "Oxygen" && searchCity === "Vizag") {
       return Vizag_Oxygen;
     }
-    if (clickOnService === "Covid Medicines" && searchtext === "Vizag") {
+    if (ClickedService === "Covid Medicines" && searchCity === "Vizag") {
       return Vizag_Covid_Medicines;
     }
     if (
-      clickOnService === "Volunteer Database/Groups" &&
-      searchtext === "Vizag"
+      ClickedService === "Volunteer Database/Groups" &&
+      searchCity === "Vizag"
     ) {
       return Vizag_Volunteer_database;
     }
-    if (clickOnService === "Bereavement Services" && searchtext === "Vizag") {
+    if (ClickedService === "Bereavement Services" && searchCity === "Vizag") {
       return Vizag_Bereavement_Services;
     }
-    if (clickOnService === "Plasma/Blood" && searchtext === "Vizag") {
+    if (ClickedService === "Plasma/Blood" && searchCity === "Vizag") {
       return Vizag_Plasma_Blood;
     }
   }
+  // +++++++++++++++ OnCLick Services ++++++++++++++++++++++++
+
+  function handleClickOnService(service) {
+    setClickOnService(service);
+  }
 
   const value = {
-    clickOnService,
-    searchtext,
+    ClickedService,
+    searchCity,
     handleChange,
     getSuggestions,
     handleClickOnService,
