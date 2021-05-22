@@ -49,15 +49,9 @@ function Navbar() {
           </a>
         </li>
         <li className="nav-links">
-          <Slink
-            onClick={handleClick}
-            className="nav-links"
-            to="Aboutus"
-            smooth={true}
-            duration={1000}
-          >
+          <RLink onClick={handleClick} className="nav-links" to="/about-us">
             About Us
-          </Slink>
+          </RLink>
         </li>
         <li className="nav-links">
           <Slink

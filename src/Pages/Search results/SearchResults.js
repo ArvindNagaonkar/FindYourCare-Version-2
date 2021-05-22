@@ -40,16 +40,6 @@ function SearchResults() {
     }
   }
 
-  // useEffect(() => {
-  //   if (localStorage.getItem("clicked")) {
-  //     setClickOnService(JSON.parse(localStorage.getItem("clicked")));
-  //   }
-  // }, []);
-
-  // useEffect(() => {
-  //   localStorage.setItem("clicked", JSON.stringify(clickOnService));
-  // }, [clickOnService]);
-
   return (
     <>
       <div className="SearchResult">

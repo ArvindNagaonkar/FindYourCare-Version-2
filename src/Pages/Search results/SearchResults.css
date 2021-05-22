@@ -163,8 +163,8 @@
   }
 }
 
-@media screen and (max-width: 300px) {
+@media screen and (max-width: 320px) {
   .searchOut-info {
-    font-size: 0.7rem;
+    font-size: 0.5rem;
   }
 }

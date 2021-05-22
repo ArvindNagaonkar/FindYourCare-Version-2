@@ -1,160 +1,118 @@
-/* .aboutus {
-  margin: 30px;
-} */
-
-.aboutus > h1 {
-  text-align: center;
-  font-size: 3rem;
-  color: #55c57a;
-  padding: 40px 0px 48px 0px;
-}
-
-.aboutus-wrapper {
-  display: flex;
-  flex: 1;
-  margin: 20px 0px 0 20px;
-}
-
-.aboutText-box {
-  align-self: center;
-  justify-self: center;
-  margin: 0 10%;
-  flex: 1;
-}
-
-.aboutText-box > p {
-  font-size: 1.2rem;
-  text-align: justify;
+.about {
+  background-image: url("../../../../assets/images/about.png");
+  background-size: cover;
+  background-position: top;
   color: black;
-  padding: 20px 20px 8px 20px;
 }
 
-@media screen and (max-width: 1062px) {
-  .aboutText-box > p {
-    padding: 20px 0px 0px 0px;
-  }
+.about > p {
+  font-weight: 600;
 }
 
-@media screen and (max-width: 1014px) {
-  .aboutText-box {
-    flex: 0.7;
-  }
+.about_text {
+  padding: 40px 0px;
 }
 
-@media screen and (max-width: 996px) {
-  .aboutus-wrapper > img {
-    height: 57vh;
-    flex: 0.45;
-  }
+.about_section {
+  text-align: center;
 }
 
-@media screen and (max-width: 946px) {
-  .aboutus-wrapper > img {
-    border-radius: 8px;
-    height: 52vh;
-    flex: 0.45;
-  }
-
-  .aboutText-box > p {
-    font-size: 1.1rem;
-  }
+.mission_text {
+  padding: 40px 0px;
+  text-align: center;
 }
 
-@media screen and (max-width: 866px) {
-  .aboutus > a {
-    font-size: 10px;
-  }
-
-  .aboutus-wrapper > img {
-    height: 45vh;
-    flex: 0.45;
-  }
-
-  .aboutText-box > p {
-    font-size: 1rem;
-    padding: 10px 0px 0px 0px;
-  }
+.mission_section {
+  text-align: center;
 }
 
-@media screen and (max-width: 784px) {
-  .aboutus-wrapper > img {
-    height: 40vh;
-    flex: 0.45;
-  }
+.vision_text {
+  padding: 40px 0px;
+  text-align: center;
 }
 
-@media screen and (max-width: 742px) {
-  .aboutus-wrapper > img {
-    height: 35vh;
-  }
-
-  .aboutText-box > p {
-    font-size: 0.9rem;
-  }
+.benifits_tittle {
+  padding: 40px 0px;
+  text-align: center;
 }
 
-@media screen and (max-width: 666px) {
-  .aboutText-box > p {
-    font-size: 0.8rem;
-  }
+.mission-conatiner {
+  display: block;
+  margin: 0px auto;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  border: 2px solid grey;
+  margin-bottom: 30px;
+  width: 65%;
+}
 
-  .aboutus-wrapper > img {
-    height: 28vh;
-  }
+.mission_img {
+  padding: 10px;
+  width: 22%;
+}
 
-  .aboutus > a {
-    font-size: 8px;
+.mission_img3 {
+  padding: 15px 0px 15px 10px;
+
+  width: 22%;
+}
+
+.mission-info {
+  padding: 10px;
+  text-align: center;
+}
+.tittle_mission {
+  padding-bottom: 20px;
+}
+
+.mission-info3 {
+  padding: 10px 0px;
+}
+
+@media screen and (max-width: 995px) {
+  .mission-conatiner {
+    width: 70%;
   }
 }
 
-@media screen and (max-width: 582px) {
-  .aboutus-wrapper > img {
-    width: 75%;
+@media screen and (max-width: 890px) {
+  .mission-conatiner {
+    width: 90%;
+  }
+}
+
+@media screen and (max-width: 586px) {
+  .mission-conatiner {
+    width: 95%;
+  }
+}
+
+@media screen and (max-width: 450px) {
+  .mission_img {
+    padding: 10px;
+    width: 30%;
+  }
+
+  .mission-conatiner {
     display: block;
     margin: 0px auto;
-  }
-
-  .aboutus > a {
-    display: none;
-  }
-
-  .aboutus-wrapper > a {
-    display: block;
-  }
-
-  .aboutus-wrapper {
     display: flex;
     flex-direction: column;
-    margin: 10px 0px 0px 0px;
-  }
-
-  .aboutus-wrapper > a {
-    font-size: 0.8rem;
-    text-decoration: none;
-    color: grey;
-    padding-left: 13%;
-    padding-bottom: 20px;
-  }
-  .aboutText-box > p {
-    padding-bottom: 20px;
-    font-size: 1rem;
-  }
-
-  .aboutus > h1 {
-    padding: 60px 0px 48px 0px;
+    align-items: center;
+    justify-content: center;
+    border: 2px solid grey;
+    margin-bottom: 30px;
+    width: 95%;
   }
 }
 
-@media screen and (max-width: 411px) {
-  .aboutus-wrapper > a {
-    padding-top: 4px;
-    font-size: 0.5rem;
+@media screen and (max-width: 320px) {
+  .mission_img {
+    padding: 10px;
+    width: 35%;
   }
-}
-
-@media screen and (max-width: 314px) {
-  .aboutus-wrapper > a {
-    padding-top: 4px;
-    font-size: 0.5rem;
+  .tittle_mission {
+    font-size: 1.3rem;
   }
-}
+} ;
