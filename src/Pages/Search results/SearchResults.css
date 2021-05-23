@@ -1,5 +1,6 @@
 .SearchResult {
   margin-top: 5%;
+  height: 90vh;
 }
 
 .SearchResult-header {
@@ -64,9 +65,7 @@
   color: #fff;
   border-radius: 30px;
   font-size: 1.1rem;
-  position: fixed;
-  bottom: 12%;
-  right: 6%;
+  margin: 20px;
 }
 
 .flottingB:hover {

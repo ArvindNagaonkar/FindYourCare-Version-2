@@ -4,10 +4,11 @@
 
 .btn {
   margin: 0px 6px;
-  padding: 8px 20px;
+  padding: 12px 0px;
   border-radius: 4px;
   outline: none;
   border: none;
+  width: 14%;
   cursor: pointer;
 }
 
@@ -34,7 +35,7 @@
 
 .btn--medium {
   border-radius: 4px;
-  font-size: 18px;
+  font-size: 16px;
   color: #fff;
 }
 
@@ -45,7 +46,7 @@
   color: #fff;
 }
 
-@media screen and (max-width: 1146px) {
+@media screen and (max-width: 1149px) {
   .btn {
     margin: 0px 6px;
     padding: 10px 10px;
@@ -53,5 +54,11 @@
     outline: none;
     border: none;
     cursor: pointer;
+  }
+}
+
+@media screen and (max-width: 1149px) {
+  .btn--medium {
+    width: 20%;
   }
 }

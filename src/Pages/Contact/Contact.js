@@ -61,7 +61,7 @@ function Contact() {
         <div className="contactFromContainer">
           <form onSubmit={handleSubmit}>
             <div className="inputDetail">
-              <label For="Full Name">Full Name:</label>
+              <label htmlFor="Full Name">Full Name:</label>
               <input
                 type="text"
                 placeholder="Enter your Full name"
@@ -74,7 +74,7 @@ function Contact() {
               ></input>
             </div>
             <div className="inputDetail">
-              <label For="email">Email:</label>
+              <label htmlFor="email">Email:</label>
               <input
                 type="email"
                 placeholder="Enter your email"
@@ -87,7 +87,7 @@ function Contact() {
               ></input>
             </div>
             <div className="inputDetail">
-              <label For="message">Message:</label>
+              <label htmlFor="message">Message:</label>
               <textarea
                 placeholder="Message"
                 name="message"

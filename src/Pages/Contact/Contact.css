@@ -98,3 +98,78 @@
   border-radius: 30px;
   margin-bottom: 30px;
 }
+
+@media screen and (max-width: 1121px) {
+  .contactFromContainer {
+    width: 70%;
+  }
+}
+
+@media screen and (max-width: 1048px) {
+  .DetailsContainer {
+    width: 68%;
+  }
+}
+
+@media screen and (max-width: 860px) {
+  .DetailsContainer {
+    width: 85%;
+  }
+  .contactFromContainer {
+    width: 80%;
+  }
+}
+/* @media screen and (max-width: 670px) {
+  .DetailsContainer {
+    width: 90%;
+  }
+  .contactFromContainer {
+    width: 90%;
+  }
+} */
+
+@media screen and (max-width: 730px) {
+  .contact {
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+  }
+  .DetailsContainer {
+    padding-top: 40px;
+    width: 85%;
+  }
+  .contactFromContainer {
+    width: 80%;
+  }
+  .contactForm {
+    float: 1;
+    width: 70%;
+  }
+}
+
+@media screen and (max-width: 540px) {
+  .contactFromContainer {
+    width: 80%;
+  }
+  .contactForm {
+    width: 90%;
+  }
+}
+
+@media screen and (max-width: 416px) {
+  .contactFromContainer {
+    width: 80%;
+  }
+  .contactForm {
+    width: 100%;
+  }
+}
+
+@media screen and (max-width: 330px) {
+  .contactFromContainer {
+    width: 90%;
+  }
+  .contactForm {
+    width: 90%;
+  }
+}

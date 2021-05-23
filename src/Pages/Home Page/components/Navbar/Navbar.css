@@ -7,7 +7,7 @@
   display: flex;
   justify-content: center;
   align-items: center;
-  font-size: 1.2rem;
+  font-size: 1.1rem;
   font-weight: 700;
   z-index: 1000;
 }
@@ -44,6 +44,10 @@
   padding: 0.5rem 1rem;
 }
 
+.nav-links:hover {
+  color: #28b428b3;
+}
+
 .nav-links > a {
   text-decoration: none;
   color: black;
@@ -61,16 +65,51 @@
   display: none;
 }
 
+.mobLink {
+  display: none;
+}
+
+.navlinksBtn {
+  margin: 5px;
+  padding: 10px 0px;
+  text-align: center;
+  text-decoration: none;
+  color: black;
+  width: 20%;
+  border-radius: 8px;
+  border: 2px solid grey;
+}
+
+.navlinksBtn:hover {
+  border: 2px solid #28b428b3;
+}
+
 @media screen and (max-width: 996px) {
+  .fa-chevron-circle-down {
+    display: none;
+  }
+
+  .navlinksBtn {
+    display: none;
+  }
+
   .navbarItems {
     position: relative;
   }
 
+  .mobLink {
+    color: white;
+    text-decoration: none;
+    text-align: center;
+    padding: 1rem;
+    width: 100%;
+    display: table;
+  }
   .nav-menu {
     display: flex;
     flex-direction: column;
     width: 100%;
-    height: 286px;
+    height: 540px;
     position: absolute;
     top: 64px;
     left: -100%;
@@ -132,10 +171,10 @@
     padding: 0.7rem;
     margin: 1rem auto;
     border-radius: 4px;
-    width: 60%;
+    width: 30%;
     background: #4ad9e4;
     color: #fff;
-    font-size: 1.5rem;
+    font-size: 1rem;
     text-decoration: none;
   }
 
@@ -144,33 +183,13 @@
     color: #6568f4;
     transition: 250ms;
   }
-
-  nav > Button {
-    display: none;
-  }
-
-  .Buttonlink > Button {
-    display: none;
-  }
 }
 
-@media screen and (max-width: 1204px) {
-  .btn--medium {
-    font-size: 16px;
-  }
-}
-
-@media screen and (max-width: 1170px) {
-  .btn--medium {
-    font-size: 16px;
-  }
-}
-
-@media screen and (max-width: 1150px) {
-  .btn--medium {
-    font-size: 16px;
-    width: 14%;
-  }
+.dropdown {
+  background-color: #4ad9e4;
+  position: absolute;
+  left: 0;
+  min-width: 120px;
 }
 
 @media screen and (max-width: 1120px) {
@@ -180,6 +199,10 @@
   .nav-links {
     padding: 0.5rem 0.7rem;
   }
+
+  .navlinksBtn {
+    font-size: 16px;
+  }
 }
 
 @media screen and (max-width: 1070px) {
@@ -187,10 +210,16 @@
     font-size: 1.2rem;
   }
 }
-@media screen and (max-width: 1020px) {
-  .btn--medium {
-    font-size: 1rem;
-    width: 15%;
+
+@media screen and (max-width: 520px) {
+  .nav-links-mobile {
+    width: 40%;
+  }
+}
+
+@media screen and (max-width: 400px) {
+  .nav-links-mobile {
+    width: 60%;
   }
 }
 

@@ -5,7 +5,7 @@
 
 .footer {
   width: 80%;
-  height: 40vh;
+  height: 250px;
   background-color: #212329;
   color: #fff;
   display: flex;
@@ -80,7 +80,7 @@
 
 @media screen and (max-width: 1226px) {
   .footer {
-    height: 63vh;
+    height: 500px;
   }
   .footer-email-form {
     margin-top: 4rem;
@@ -104,6 +104,11 @@
 }
 
 @media screen and (max-width: 790px) {
+  .footer {
+    height: 380px;
+    padding-top: 0rem;
+  }
+
   .footer-heading {
     margin-right: 3rem;
   }
@@ -111,7 +116,7 @@
 
 @media screen and (max-width: 540px) {
   .footer {
-    height: 90vh;
+    height: 370px;
     padding-top: 0rem;
   }
 
@@ -129,20 +134,24 @@
   }
 }
 
-@media screen and (max-width: 489px) {
+@media screen and (max-width: 490px) {
   .footer-2 {
     margin-right: 7rem;
   }
+  .footer {
+    height: 450px;
+    padding-top: 0rem;
+  }
 }
 
-@media screen and (max-width: 434px) {
+@media screen and (max-width: 438px) {
   .footer-3 {
     display: none;
   }
 
   .footer {
     padding-top: 0rem;
-    height: 100vh;
+    height: 500px;
   }
 
   .footer-container {
@@ -162,6 +171,24 @@
   }
   .footer-email-form h2 {
     margin-bottom: 1rem;
+  }
+}
+
+@media screen and (max-width: 360px) {
+  .footer {
+    height: 100vh;
+  }
+}
+
+@media screen and (max-width: 375px) {
+  .footer {
+    height: 500px;
+  }
+}
+
+@media screen and (max-width: 320px) {
+  .footer {
+    height: 100vh;
   }
 }
 

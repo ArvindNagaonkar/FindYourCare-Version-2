@@ -1,0 +1,110 @@
+.contactForm {
+  margin: 40px 0px;
+  flex: 0.5;
+  display: block;
+}
+
+.RcontactFromContainer {
+  padding-top: 30px;
+  box-shadow: 0px 20px 30px rgba(40, 188, 100, 0.2);
+  border-radius: 15px;
+  width: 36%;
+  margin: 0 auto;
+}
+
+.inputDetail {
+  width: 80%;
+  display: flex;
+  margin: 0 auto;
+  flex-direction: column;
+  padding: 5px 0px;
+}
+.inputDetail > input {
+  font-size: 1.2rem;
+  padding: 8px;
+  border: none;
+  border-bottom: 2px solid grey;
+}
+
+.inputDetail > input:focus {
+  outline: none;
+  border-bottom: 2px solid rgb(40, 188, 100);
+}
+
+.inputDetail > label {
+  font-weight: 700;
+  padding-bottom: 4px;
+}
+
+.inputDetail > textarea {
+  padding: 6px;
+  font-size: 1rem;
+}
+
+.inputDetail > textarea:focus {
+  outline: none;
+  border: 2px solid #28bc64;
+}
+
+.submitButtonContainer {
+  padding: 10px;
+  display: block;
+}
+
+.submitButton {
+  margin: 0 auto;
+  display: block;
+  font-size: 1.4rem;
+  border: none;
+  background-color: #28bc64;
+  color: #fff;
+  padding: 7px 24px;
+  border-radius: 30px;
+  margin-bottom: 30px;
+}
+
+@media screen and (max-width: 1120px) {
+  .RcontactFromContainer {
+    width: 42%;
+  }
+}
+
+@media screen and (max-width: 880px) {
+  .RcontactFromContainer {
+    width: 50%;
+  }
+}
+
+@media screen and (max-width: 730px) {
+  .RcontactFromContainer {
+    width: 60%;
+  }
+}
+
+@media screen and (max-width: 550px) {
+  .RcontactFromContainer {
+    width: 70%;
+  }
+}
+
+@media screen and (max-width: 450px) {
+  .RcontactFromContainer {
+    width: 80%;
+  }
+}
+
+@media screen and (max-width: 370px) {
+  .inputDetail > input {
+    font-size: 1rem;
+  }
+
+  .RcontactFromContainer {
+    width: 90%;
+  }
+}
+
+@media screen and (max-width: 370px) {
+  .RcontactFromContainer {
+    width: 95%;
+  }
+}

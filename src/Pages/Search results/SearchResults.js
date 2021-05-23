@@ -10,7 +10,6 @@ function SearchResults() {
     if (ClickedService === "Helpline") {
       return "https://firebasestorage.googleapis.com/v0/b/findyourcare-production.appspot.com/o/Service%20icons%2FHelpline.png?alt=media&token=52351238-3c31-4dc0-a204-e32e0239805a";
     }
-
     if (ClickedService === "Plasma/Blood") {
       return "https://firebasestorage.googleapis.com/v0/b/findyourcare-production.appspot.com/o/Service%20icons%2FPlasma-Blood.png?alt=media&token=89cf302a-46d0-452a-80ab-3cb1bdc785e9";
     }
@@ -54,6 +53,28 @@ function SearchResults() {
             <h3>
               {ClickedService}s {search && "in " + search}
             </h3>
+            {ClickedService === "Covid Medicine" ? (
+              <a
+                href="https://www.google.com/forms/about/"
+                rel="noreferrer"
+                target="_blank"
+              >
+                <button className="flottingB">Buy Medicines</button>
+              </a>
+            ) : (
+              ""
+            )}
+            {ClickedService === "Ambulance" ? (
+              <a
+                href="https://docs.google.com/forms/d/e/1FAIpQLSdZQJiBKOtEXccRJnN1qlaksmYY6BnIjL147WPECj2HlhI8Xw/viewform"
+                rel="noreferrer"
+                target="_blank"
+              >
+                <button className="flottingB">Book Ambulance</button>
+              </a>
+            ) : (
+              ""
+            )}
           </div>
         </div>
         {Object.keys(getServices()).map((id) => {
@@ -67,17 +88,6 @@ function SearchResults() {
             </div>
           );
         })}
-        {ClickedService === "Covid Medicine" ? (
-          <a
-            href="https://www.google.com/forms/about/"
-            rel="noreferrer"
-            target="_blank"
-          >
-            <button className="flottingB">Buy Medicines</button>
-          </a>
-        ) : (
-          ""
-        )}
       </div>
     </>
   );

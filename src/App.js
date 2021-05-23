@@ -10,6 +10,7 @@ import Contact from "./Pages/Contact/Contact";
 import Support from "./Pages/Support/Support";
 import Footer from "./Pages/Home Page/footer/Footer";
 import TermsOfUse from "./Pages/Terms Of Use/TermsOfUse";
+import Register from "./Pages/Register/Register";
 
 function App() {
   return (
@@ -24,7 +25,8 @@ function App() {
             <Route path="/jobs" component={Jobs} />
             <Route path="/contact" component={Contact} />
             <Route path="/support" component={Support} />
-            <Route path="/TermsOfUse" component={TermsOfUse} />
+            <Route path="/Terms-of-Use" component={TermsOfUse} />
+            <Route path="/register" component={Register} />
           </Switch>
         </InputSearchProvider>
         <Footer />
