@@ -1,9 +1,27 @@
 import React, { useState } from "react";
 import "./Footer.css";
 import { Link as Rlink } from "react-router-dom";
+import { storeDb } from "../../../utility/firebase";
 
 function Footer() {
   const [email, setEmail] = useState("");
+
+  const handleSubmit = (e) => {
+    e.preventDefault();
+    storeDb
+      .collection("Newslatter_Subscribers")
+      .add({
+        email: email,
+      })
+      .then(() => {
+        alert("You are successfully joined our newsletter 👍");
+      })
+      .catch((error) => {
+        alert(error.message);
+      });
+
+    setEmail("");
+  };
 
   return (
     <div className="footer-container">
@@ -20,7 +38,7 @@ function Footer() {
           <Rlink to="/termsOfUse">Terms of Use</Rlink>
           <div className="aboutus-com">
             <i className="far fa-envelope"></i>
-            <span>info@findyourcare.app</span>
+            <span>info@findyourcare.com</span>
           </div>
           <div className="aboutus-com">
             <i className="fas fa-phone"></i>
@@ -84,7 +102,7 @@ function Footer() {
         </div>
         <div className="footer-email-form">
           <h2>Join our Newsletter</h2>
-          <form>
+          <form onSubmit={handleSubmit}>
             <input
               type="email"
               placeholder="enter@example.com"
