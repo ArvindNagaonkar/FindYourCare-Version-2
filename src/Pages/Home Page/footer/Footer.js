@@ -1,41 +1,100 @@
-import React from "react";
+import React, { useState } from "react";
 import "./Footer.css";
+import { Link as Rlink } from "react-router-dom";
 
 function Footer() {
+  const [email, setEmail] = useState("");
+
   return (
     <div className="footer-container">
       <div className="footer">
         <div className="footer-heading footer-1">
           <h2>About Us</h2>
-          <a href="#">Blog</a>
-          <a href="#">Demo</a>
-          <a href="#">Cutomers</a>
-          <a href="#">Investors</a>
-          <a href="#">Terms of Service</a>
+          <a
+            rel="noreferrer"
+            href="https://www.iafindia.com/mr-arbaaz-kadwekar/"
+            target="_blank"
+          >
+            Blog
+          </a>
+          <Rlink to="/termsOfUse">Terms of Use</Rlink>
+          <div className="aboutus-com">
+            <i className="far fa-envelope"></i>
+            <span>info@findyourcare.app</span>
+          </div>
+          <div className="aboutus-com">
+            <i className="fas fa-phone"></i>
+            <span>+91 82910 61060</span>
+          </div>
         </div>
         <div className="footer-heading footer-2">
           <h2>Contact Us</h2>
-          <a href="#">Jobs</a>
-          <a href="#">Support</a>
-          <a href="#">Contact</a>
-          <a href="#">Sponsorships</a>
+          <Rlink to="/jobs" style={{ TextDecoder: "none", color: "white" }}>
+            Jobs
+          </Rlink>
+          <Rlink to="/support" style={{ TextDecoder: "none", color: "white" }}>
+            Support
+          </Rlink>
+          <Rlink to="/contact" style={{ TextDecoder: "none", color: "white" }}>
+            Contact
+          </Rlink>
         </div>
         <div className="footer-heading footer-3">
           <h2>Social Media</h2>
-          <a href="#">Instagram </a>
-          <a href="#">Facebook</a>
-          <a href="#">Youtube</a>
-          <a href="#">Twitter</a>
-          <a href="#">Linkedin</a>
+          <div className="Sociallink-container">
+            <a
+              className="Sociallink"
+              href="https://www.instagram.com/findyourcare.app/"
+              rel="noreferrer"
+              target="_blank"
+            >
+              <i className="fab fa-instagram"></i>Instagram{" "}
+            </a>
+          </div>
+          <div className="Sociallink-container">
+            <a
+              className="Sociallink"
+              rel="noreferrer"
+              href="https://www.facebook.com/findyourcare.app.5"
+              target="_blank"
+            >
+              <i className="fab fa-facebook-f"></i>Facebook
+            </a>
+          </div>
+          <div className="Sociallink-container">
+            <a
+              className="Sociallink"
+              rel="noreferrer"
+              href="https://twitter.com/Findyourcare1?s=09"
+              target="_blank"
+            >
+              <i className="fab fa-twitter"></i>Twitter
+            </a>
+          </div>
+          <div className="Sociallink-container">
+            <a
+              className="Sociallink"
+              rel="noreferrer"
+              href="https://www.linkedin.com/showcase/findyourcare-com/"
+              target="_blank"
+            >
+              <i className="fab fa-linkedin-in"></i>Linkedin
+            </a>
+          </div>
         </div>
         <div className="footer-email-form">
-          <h2>Join our newsletter</h2>
-          <input
-            type="email"
-            placeholder="enter@example.com"
-            id="footer-email"
-          />
-          <input type="submit" value="Sign Up" id="footer-email-btn" />
+          <h2>Join our Newsletter</h2>
+          <form>
+            <input
+              type="email"
+              placeholder="enter@example.com"
+              id="footer-email"
+              value={email}
+              onChange={(e) => setEmail(e.target.value)}
+              required
+            />
+            <button id="footer-email-btn">Submit</button>
+          </form>
         </div>
       </div>
     </div>

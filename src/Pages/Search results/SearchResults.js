@@ -1,10 +1,10 @@
 import React from "react";
 import "./SearchResults.css";
-// import Searchbar from "../Home Page/components/Search bar/Searchbar";
+import Searchbar from "../Home Page/components/Search bar/Searchbar";
 import { useInput } from "../../context/SearchContext";
 
 function SearchResults() {
-  const { getServices, ClickedService, SearchedText } = useInput();
+  const { getServices, ClickedService, search } = useInput();
 
   function handleImg() {
     if (ClickedService === "Helpline") {
@@ -43,16 +43,16 @@ function SearchResults() {
   return (
     <>
       <div className="SearchResult">
-        {/* <div className="SearchResult-header">
+        <div className="SearchResult-header">
           <div className="searchbar-box">
             <Searchbar />
           </div>
-        </div> */}
+        </div>
         <div className="searchResultHeaderContainer">
           <div className="searchResultHeader">
             <img src={handleImg()} alt="" />
             <h3>
-              {ClickedService}s {SearchedText && "in " + SearchedText}
+              {ClickedService}s {search && "in " + search}
             </h3>
           </div>
         </div>

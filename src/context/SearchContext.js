@@ -26,11 +26,6 @@ function InputSearchProvider({ children }) {
       });
   }, []);
 
-  if (clickOnService !== "") {
-    localStorage.setItem("save", clickOnService);
-  }
-  const ClickedService = localStorage.getItem("save");
-
   let citySuggestions = [];
 
   Object.keys(cities).forEach((id) => {
@@ -71,6 +66,17 @@ function InputSearchProvider({ children }) {
       );
     });
   };
+
+  if (clickOnService !== "") {
+    localStorage.setItem("save", clickOnService);
+  }
+  const ClickedService = localStorage.getItem("save");
+
+  if (searchtext !== "") {
+    localStorage.setItem("search", searchtext);
+  }
+
+  const search = localStorage.getItem("search");
 
   // if (suggest.length === ) {
   //   localStorage.setItem("searchedText", suggest);
@@ -4429,6 +4435,7 @@ function InputSearchProvider({ children }) {
   const value = {
     ClickedService,
     searchtext,
+    search,
     handleChange,
     getSuggestions,
     handleClickOnService,

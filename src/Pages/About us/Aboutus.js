@@ -1,9 +1,9 @@
 import React from "react";
 import "./Aboutus.css";
-import mission1 from "../../../../assets/images/mission1.png";
-import mission2 from "../../../../assets/images/mission2.png";
-import mission3 from "../../../../assets/images/mission3.png";
-import mission4 from "../../../../assets/images/mission4.png";
+import mission1 from "../../assets/images/mission1.png";
+import mission2 from "../../assets/images/mission2.png";
+import mission3 from "../../assets/images/mission3.png";
+import mission4 from "../../assets/images/mission4.png";
 
 function Aboutus() {
   return (

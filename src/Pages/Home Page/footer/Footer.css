@@ -38,6 +38,16 @@
 .footer-email-form h2 {
   margin-bottom: 2rem;
 }
+
+.Sociallink > i {
+  padding: 6px 10px 6px 0px;
+  font-size: 1rem;
+}
+
+.aboutus-com > i {
+  padding: 6px 6px 6px 0px;
+}
+
 #footer-email {
   width: 250px;
   height: 40px;
@@ -68,9 +78,9 @@
   transition: all 0.4s ease-out;
 }
 
-@media screen and (max-width: 1150px) {
+@media screen and (max-width: 1120px) {
   .footer {
-    height: 50vh;
+    height: 63vh;
   }
   .footer-email-form {
     margin-top: 4rem;
@@ -80,13 +90,59 @@
 @media screen and (max-width: 820px) {
   .footer {
     padding-top: 2rem;
+    height: 70vh;
   }
 }
-@media screen and (max-width: 720 px) {
+@media screen and (max-width: 720px) {
   .footer-3 {
     display: none;
   }
-  .footer-email-from {
-    margin-top: 4rem;
+  .footer-email-form {
+    margin-top: 2rem;
+  }
+}
+
+@media screen and (max-width: 535px) {
+  .footer {
+    height: 90vh;
+    padding-top: 0rem;
+  }
+
+  .footer-heading {
+    margin-top: 0rem;
+  }
+
+  .footer-container {
+    padding-top: 1.8rem;
+  }
+}
+
+@media screen and (max-width: 434px) {
+  .footer-3 {
+    display: none;
+  }
+
+  .footer {
+    padding-top: 0rem;
+    height: 100vh;
+  }
+
+  .footer-container {
+    padding: 0rem;
+  }
+
+  .footer-email-form {
+    margin-top: 2rem;
+  }
+
+  .footer-heading h2 {
+    margin: 1rem auto;
+  }
+
+  .footer-email-form {
+    margin-top: 1rem;
+  }
+  .footer-email-form h2 {
+    margin-bottom: 1rem;
   }
 }

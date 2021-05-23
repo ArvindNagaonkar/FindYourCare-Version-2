@@ -54,15 +54,9 @@ function Navbar() {
           </RLink>
         </li>
         <li className="nav-links">
-          <Slink
-            onClick={handleClick}
-            className="nav-links"
-            to="ContactUs"
-            smooth={true}
-            duration={1000}
-          >
+          <RLink className="nav-links" to="/contact">
             Contact Us
-          </Slink>
+          </RLink>
         </li>
       </ul>
       <Button>Service Provider</Button>
