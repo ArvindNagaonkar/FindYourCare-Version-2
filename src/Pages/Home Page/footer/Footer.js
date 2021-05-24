@@ -35,7 +35,8 @@ function Footer() {
           >
             Blog
           </a>
-          <Rlink to="/Terms-of-Use">Terms of Use</Rlink>
+          <Rlink to="/terms-of-Use">Terms of Use</Rlink>
+          <Rlink to="/privacy-policy">Privacy Policy</Rlink>
           <div className="aboutus-com">
             <i className="far fa-envelope"></i>
             <span>info@findyourcare.com</span>

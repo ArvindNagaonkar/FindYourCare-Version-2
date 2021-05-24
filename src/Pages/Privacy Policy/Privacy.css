@@ -1,0 +1,35 @@
+.privacy {
+  display: block;
+  width: 80%;
+  color: black;
+  margin: 8rem auto;
+}
+
+.privacy > h2 {
+  font-weight: 900;
+}
+
+.privacy > p {
+  text-align: justify;
+  padding-bottom: 30px;
+  line-height: 1.8rem;
+}
+
+.privacy > ul {
+  padding-left: 20px;
+  line-height: 2.3rem;
+  padding-bottom: 30px;
+}
+
+.privacy > h1 {
+  font-weight: 900;
+}
+
+.privacy > h3 {
+  color: black;
+  font-weight: 900;
+}
+
+.privacy > a {
+  color: blue;
+}

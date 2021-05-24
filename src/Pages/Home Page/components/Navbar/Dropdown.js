@@ -13,14 +13,13 @@ function Dropdown() {
         className={click ? "dropdown-menu clicked" : "dropdown-menu"}
       >
         <li>
-          <a
+          <Rlink
+            to="/blog"
             className="dropdown-link"
-            rel="noreferrer"
-            href="https://www.iafindia.com/mr-arbaaz-kadwekar/"
-            target="_blank"
+            onClick={() => setClick(false)}
           >
             Blog
-          </a>
+          </Rlink>
         </li>
         <li>
           <a

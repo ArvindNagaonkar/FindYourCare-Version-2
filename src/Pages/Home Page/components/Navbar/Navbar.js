@@ -67,7 +67,7 @@ function Navbar() {
           {dropdown && <Dropdown />}
         </li>
         <li>
-          <RLink onClick={handleClick} className="mobLink" to="/about-us">
+          <RLink onClick={handleClick} className="mobLink" to="/blog">
             Blog
           </RLink>
         </li>
