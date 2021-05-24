@@ -28,13 +28,7 @@ function Footer() {
       <div className="footer">
         <div className="footer-heading footer-1">
           <h2>About Us</h2>
-          <a
-            rel="noreferrer"
-            href="https://www.iafindia.com/mr-arbaaz-kadwekar/"
-            target="_blank"
-          >
-            Blog
-          </a>
+          <Rlink to="/blog">Blog</Rlink>
           <Rlink to="/terms-of-Use">Terms of Use</Rlink>
           <Rlink to="/privacy-policy">Privacy Policy</Rlink>
           <div className="aboutus-com">

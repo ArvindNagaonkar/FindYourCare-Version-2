@@ -72,46 +72,53 @@ function Navbar() {
           </RLink>
         </li>
         <li>
-          <RLink onClick={handleClick} className="mobLink" to="/about-us">
-            Artical
-          </RLink>
+          <a
+            rel="noreferrer"
+            href="https://www.iafindia.com/mr-arbaaz-kadwekar/"
+            target="_blank"
+            className="mobLink"
+          >
+            Articles
+          </a>
         </li>
         <li>
-          <RLink onClick={handleClick} className="mobLink" to="/about-us">
+          <RLink onClick={handleClick} className="mobLink" to="/contact">
             Contact us
           </RLink>
         </li>
         <li>
-          <RLink
-            onClick={handleClick}
+          <a
             className="nav-links-mobile"
-            to="/about-us"
+            href="https://dkcoid19-tracker.herokuapp.com/"
+            target="_blank"
+            rel="noreferrer"
           >
             Covid19-Tracker
-          </RLink>
+          </a>
         </li>
         <li>
           <RLink
             onClick={handleClick}
             className="nav-links-mobile"
-            to="/about-us"
+            to="/register"
           >
             Latest Update
           </RLink>
         </li>
         <li>
-          <RLink
-            onClick={handleClick}
+          <a
             className="nav-links-mobile"
-            to="/about-us"
+            href="https://docs.google.com/forms/d/e/1FAIpQLSeHRvJsG98RiQ7KlnFNW3PKPBwu-RhtWEOPlTdZh4SZ0t1SMw/viewform"
+            target="_blank"
+            rel="noreferrer"
           >
-            Latest Update
-          </RLink>
+            Service Provider
+          </a>
         </li>
       </ul>
       <a
         className="navlinksBtn"
-        href="https://www.google.com/forms/about/"
+        href="https://dkcoid19-tracker.herokuapp.com/"
         target="_blank"
         rel="noreferrer"
       >
