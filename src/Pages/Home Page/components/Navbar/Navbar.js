@@ -89,7 +89,7 @@ function Navbar() {
         <li>
           <a
             className="nav-links-mobile"
-            href="https://dkcoid19-tracker.herokuapp.com/"
+            href="https://dkcovid19-tracker.herokuapp.com/"
             target="_blank"
             rel="noreferrer"
           >
@@ -118,7 +118,7 @@ function Navbar() {
       </ul>
       <a
         className="navlinksBtn"
-        href="https://dkcoid19-tracker.herokuapp.com/"
+        href="https://dkcovid19-tracker.herokuapp.com/"
         target="_blank"
         rel="noreferrer"
       >

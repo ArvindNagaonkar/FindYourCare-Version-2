@@ -2,12 +2,10 @@
   display: flex;
   justify-content: center;
   align-items: center;
-  min-height: 100vh;
+  /* height: 600px; */
 }
 
-.comingSoon > h3 {
-  position: relative;
-  font-size: 8vw;
-  color: white;
-  -webkit-text-stroke: 2px #329d52;
+.comingSoon > img {
+  height: 100%;
+  width: 100%;
 }

@@ -1,6 +1,7 @@
 .footer-container {
   background-color: #212329;
   padding: 4rem 0 2rem 0;
+  justify-content: flex-end;
 }
 
 .footer {

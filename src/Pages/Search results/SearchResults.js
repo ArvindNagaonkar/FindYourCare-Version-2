@@ -83,7 +83,7 @@ function SearchResults() {
               <img src={handleImg()} alt="" />
               <div className="searchOut-info">
                 <span>Name: {getServices()[id].company}</span>
-                <span>Contact/Links: {getServices()[id].contactLink}</span>
+                <span>Contact: {getServices()[id].contactLink}</span>
               </div>
             </div>
           );

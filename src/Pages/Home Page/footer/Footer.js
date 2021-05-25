@@ -24,7 +24,7 @@ function Footer() {
   };
 
   return (
-    <div className="footer-container">
+    <footer className="footer-container">
       <div className="footer">
         <div className="footer-heading footer-1">
           <h2>About Us</h2>
@@ -110,7 +110,7 @@ function Footer() {
           </form>
         </div>
       </div>
-    </div>
+    </footer>
   );
 }
 

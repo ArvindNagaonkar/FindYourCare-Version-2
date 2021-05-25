@@ -1,9 +1,10 @@
 import React from "react";
+import comingSoonImg from "../../assets/images/comingSoon.jpg";
 import "./ComingSoon.css";
 function ComingSoon() {
   return (
     <div className="comingSoon">
-      <h3 data-text="Coming Soon...">Coming Soon...</h3>
+      <img src={comingSoonImg} alt="" />
     </div>
   );
 }
