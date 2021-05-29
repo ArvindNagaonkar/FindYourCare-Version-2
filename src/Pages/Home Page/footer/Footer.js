@@ -106,8 +106,20 @@ function Footer() {
               onChange={(e) => setEmail(e.target.value)}
               required
             />
-            <button id="footer-email-btn">Submit</button>
+            <button id="footer-email-btn">Subscribe</button>
           </form>
+          <div className="copyrightInput">
+            <span>
+              Copyright <i className="fas fa-copyright"></i> 2021 -All Rights
+              Reserved - Domain Name
+            </span>
+          </div>
+        </div>
+        <div className="copyright">
+          <span>
+            Copyright <i className="fas fa-copyright"></i> 2021 -All Rights
+            Reserved - Domain Name
+          </span>
         </div>
       </div>
     </footer>

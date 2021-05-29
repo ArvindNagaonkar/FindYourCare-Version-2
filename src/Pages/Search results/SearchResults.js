@@ -64,17 +64,6 @@ function SearchResults() {
             ) : (
               ""
             )}
-            {ClickedService === "Ambulance" ? (
-              <a
-                href="https://docs.google.com/forms/d/e/1FAIpQLSdZQJiBKOtEXccRJnN1qlaksmYY6BnIjL147WPECj2HlhI8Xw/viewform"
-                rel="noreferrer"
-                target="_blank"
-              >
-                <button className="flottingB">Book Ambulance</button>
-              </a>
-            ) : (
-              ""
-            )}
           </div>
         </div>
         {Object.keys(getServices()).map((id) => {

@@ -23,7 +23,9 @@ function App() {
         <InputSearchProvider>
           <Switch>
             <Route path="/" exact component={HomePage} />
+
             <Route path="/search-result" component={SearchResult} />
+
             <Route path="/about-us" component={Aboutus} />
             <Route path="/jobs" component={Jobs} />
             <Route path="/contact" component={Contact} />
