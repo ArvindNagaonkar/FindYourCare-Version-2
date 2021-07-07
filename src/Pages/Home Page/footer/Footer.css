@@ -96,6 +96,19 @@
   margin: 0 auto;
 }
 
+.dev {
+  padding-left: 10px;
+}
+
+.dev-link {
+  text-decoration: none;
+  color: #fff;
+}
+
+.dev-link:hover {
+  color: #28bc64;
+}
+
 @media screen and (max-width: 1227px) {
   .footer {
     height: 500px;
