@@ -4,15 +4,15 @@ function TermsOfUse() {
   return (
     <div className="TeramsOfUse">
       <h2>Terms and Conditions</h2>
-      <span>Welcome to findyourcare!</span>
+      <span>Welcome to Kurebuddy!</span>
       <p>
         These terms and conditions outline the rules and regulations for the use
-        of alloiono’s Website, located at https://findyourcare.app.
+        of alloiono’s Website, located at https://Kurebuddy.app.
       </p>
       <p>
         By accessing this website we assume you accept these terms and
-        conditions. Do not continue to use findyourcare if you do not agree to
-        take all of the terms and conditions stated on this page.
+        conditions. Do not continue to use Kurebuddy if you do not agree to take
+        all of the terms and conditions stated on this page.
       </p>
       <p className="lineSpace">
         The following terminology applies to these Terms and Conditions, Privacy
@@ -32,8 +32,8 @@ function TermsOfUse() {
       </p>
       <h2>Cookies</h2>
       <p>
-        We employ the use of cookies. By accessing findyourcare, you agreed to
-        use cookies in agreement with the alloiono’s Privacy Policy.
+        We employ the use of cookies. By accessing Kurebuddy, you agreed to use
+        cookies in agreement with the alloiono’s Privacy Policy.
       </p>
       <p>
         Most interactive websites use cookies to let us retrieve the user’s
@@ -45,17 +45,17 @@ function TermsOfUse() {
       <h2>License</h2>
       <p>
         Unless otherwise stated, alloiono and/or its licensors own the
-        intellectual property rights for all material on findyourcare. All
+        intellectual property rights for all material on Kurebuddy. All
         intellectual property rights are reserved. You may access this from
-        findyourcare for your own personal use subjected to restrictions set in
+        Kurebuddy for your own personal use subjected to restrictions set in
         these terms and conditions.
       </p>
       <p>You must not:</p>
       <ul>
-        <li>Republish material from findyourcare</li>
-        <li>Sell, rent or sub-license material from findyourcare</li>
-        <li>Reproduce, duplicate or copy material from findyourcare</li>
-        <li>Redistribute content from findyourcare</li>
+        <li>Republish material from Kurebuddy</li>
+        <li>Sell, rent or sub-license material from Kurebuddy</li>
+        <li>Reproduce, duplicate or copy material from Kurebuddy</li>
+        <li>Redistribute content from Kurebuddy</li>
       </ul>
       <p>
         This Agreement shall begin on the date hereof. Our Terms and Conditions

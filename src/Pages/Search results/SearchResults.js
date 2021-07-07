@@ -55,7 +55,7 @@ function SearchResults() {
             </h3>
             {ClickedService === "Covid Medicine" ? (
               <a
-                href="https://www.google.com/forms/about/"
+                href="https://docs.google.com/forms/d/e/1FAIpQLScXT2_QdBue7widi0DjP75nBHSGlICRUsUaw7aUBMxYb608Vg/viewform"
                 rel="noreferrer"
                 target="_blank"
               >

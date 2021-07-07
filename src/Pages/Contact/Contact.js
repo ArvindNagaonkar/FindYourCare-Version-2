@@ -37,7 +37,7 @@ function Contact() {
           </div>
           <p>
             Always Get In Touch Always Get In Touch Our Contact Details
-            FindYourCare aims at helping you find some of the best Medical
+            Kurebuddy aims at helping you find some of the best Medical
             Healthcare's in India, also providing you with a wide range of
             Healthcare products & Emergency Service Facilities.
           </p>
@@ -48,7 +48,7 @@ function Contact() {
             </div>
             <div className="contactDetails">
               <i className="far fa-envelope"></i>
-              <span>info@findyourcare.com</span>
+              <span>info@Kurebuddy.com</span>
             </div>
             <div className="contactDetails">
               <i className="fas fa-phone"></i>

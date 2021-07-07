@@ -33,7 +33,7 @@ function Footer() {
           <Rlink to="/privacy-policy">Privacy Policy</Rlink>
           <div className="aboutus-com">
             <i className="far fa-envelope"></i>
-            <span>info@findyourcare.com</span>
+            <span>info@Kurebuddy.com</span>
           </div>
           <div className="aboutus-com">
             <i className="fas fa-phone"></i>

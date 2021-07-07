@@ -7,7 +7,7 @@ function Header() {
         <img src="" alt=""></img>
         <div className="text-box">
           <h1 className="heading-primary">
-            <span className="heading-primary-main">FINDYOURCARE</span>
+            <span className="heading-primary-main">Kurebuddy</span>
             <span className="heading-primary-sub">
               Helping you find Healthcare you deserve
             </span>

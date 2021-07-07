@@ -87,9 +87,9 @@ function Privacy() {
           infrastructure itself (for example, the duration of a page visit).
         </li>
         <li>
-          <strong>Website</strong> refers to Findyourcare, accessible from{" "}
-          <a href="https://findyourcare.app" rel="noreferrer" target="_blank">
-            https://findyourcare.app
+          <strong>Website</strong> refers to Kurebuddy, accessible from{" "}
+          <a href="https://Kurebuddy.app" rel="noreferrer" target="_blank">
+            https://Kurebuddy.app
           </a>
         </li>
         <li>
@@ -470,7 +470,7 @@ function Privacy() {
         If you have any questions about this Privacy Policy, You can contact us:
       </p>
       <ul>
-        <li>By email: Info@findyourcare.com</li>
+        <li>By email: Info@Kurebuddy.com</li>
         <li>By phone number: 8291061060</li>
         <li>
           By mail: 59,11/12, F-0 Swami Vivekanand Nagar, Hutama Ganpat Kokate
