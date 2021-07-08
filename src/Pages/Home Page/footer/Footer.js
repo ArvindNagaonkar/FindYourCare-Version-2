@@ -111,7 +111,7 @@ function Footer() {
           <div className="copyrightInput">
             <span>
               Copyright <i className="fas fa-copyright"></i> 2021 -All Rights
-              Reserved - Kurebuddy
+              Reserved - Kurebuddy.com
             </span>
           </div>
           <div className="copyrightInput">
