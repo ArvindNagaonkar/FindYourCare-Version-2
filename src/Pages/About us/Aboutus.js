@@ -12,7 +12,7 @@ function Aboutus() {
         <div className="about_section">
           <h1 className="about_text">About US</h1>
           <p>
-            FINDYOURCARE is a unique online healthcare aggregator platform that
+            Kurebuddy is a unique online healthcare aggregator platform that
             connects users to the entire
             <br />
             healthcare services providers by creatinga resourceful ecosysytem of
@@ -52,7 +52,7 @@ function Aboutus() {
         </div>
 
         <h1 className="benifits_tittle">
-          FINDYOURCARE <span>Benifits</span>
+          Kurebuddy <span>Benifits</span>
         </h1>
         <div className="mission-conatiner">
           <img className="mission_img" src={mission1} alt="" />
