@@ -2,7 +2,6 @@ import React, { useState } from "react";
 import "./Navbar.css";
 import { Link as Slink } from "react-scroll";
 import { Link as RLink } from "react-router-dom";
-import Logo from "../../../../assets/icons/Flatcomp.png";
 import Dropdown from "./Dropdown";
 
 function Navbar() {
@@ -31,9 +30,9 @@ function Navbar() {
 
   return (
     <nav className="navbarItems">
-      <RLink to="/">
+      <RLink to="/" style={{ textDecoration: "none" }}>
         <div className="navbar-logo">
-          <img src={Logo} alt="" />
+          <span className="logo">Kurebuddy</span>
         </div>
       </RLink>
       <div className="menu-icon" onClick={handleClick}>

@@ -15,7 +15,10 @@
 .navbar-logo {
   justify-self: start;
   margin-left: 20px;
+  color: #3d93e0;
   cursor: pointer;
+  font-size: 25px;
+  font-weight: 800;
 }
 
 .navbar-logo > img {
@@ -111,7 +114,7 @@
     width: 100%;
     height: 540px;
     position: absolute;
-    top: 64px;
+    top: 60px;
     left: -100%;
     opacity: 1;
     transition: all 0.5s ease;
@@ -147,7 +150,8 @@
     position: absolute;
     top: 0;
     left: 0;
-    transform: translate(5%, 50%);
+    transform: translate(6%, 80%);
+    font-size: 20px;
   }
 
   .menu-icon {

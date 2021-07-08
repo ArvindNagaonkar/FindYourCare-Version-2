@@ -108,21 +108,24 @@ function Footer() {
             />
             <button id="footer-email-btn">Subscribe</button>
           </form>
-          <div className="dev-container">
-            <span>Developer:</span>
-            <a
-              href="https://www.linkedin.com/in/arvind-nagaonkar-956692202/"
-              className="dev-link"
-              rel="noreferrer"
-              target="_blank"
-            >
-              <span className="dev">Arvind Nagaonkar</span>
-            </a>
-          </div>
           <div className="copyrightInput">
             <span>
               Copyright <i className="fas fa-copyright"></i> 2021 -All Rights
               Reserved - Domain Name
+            </span>
+          </div>
+          <div className="copyrightInput">
+            <span>
+              {" "}
+              Template & Developed by{" "}
+              <a
+                href="https://www.linkedin.com/in/arvind-nagaonkar-956692202/"
+                className="dev-link"
+                rel="noreferrer"
+                target="_blank"
+              >
+                Arvind Nagaonkar
+              </a>
             </span>
           </div>
         </div>
@@ -132,6 +135,20 @@ function Footer() {
             Reserved - Domain Name
           </span>
         </div>
+      </div>
+      <div className="copyright">
+        <span>
+          {" "}
+          Template & Developed by{" "}
+          <a
+            href="https://www.linkedin.com/in/arvind-nagaonkar-956692202/"
+            className="dev-link"
+            rel="noreferrer"
+            target="_blank"
+          >
+            Arvind Nagaonkar
+          </a>
+        </span>
       </div>
     </footer>
   );

@@ -96,10 +96,6 @@
   margin: 0 auto;
 }
 
-.dev {
-  padding-left: 10px;
-}
-
 .dev-link {
   text-decoration: none;
   color: #fff;
@@ -137,7 +133,7 @@
 @media screen and (max-width: 820px) {
   .footer {
     padding-top: 2rem;
-    height: 78vh;
+    height: 500px;
   }
 }
 
@@ -186,7 +182,7 @@
     margin-right: 7rem;
   }
   .footer {
-    height: 94vh;
+    height: 570px;
     padding-top: 0rem;
   }
 }
@@ -229,7 +225,7 @@
 
 @media screen and (max-width: 320px) {
   .footer {
-    height: 600px;
+    height: 660px;
   }
 }
 
