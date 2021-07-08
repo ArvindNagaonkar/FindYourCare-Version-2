@@ -111,7 +111,7 @@ function Footer() {
           <div className="copyrightInput">
             <span>
               Copyright <i className="fas fa-copyright"></i> 2021 -All Rights
-              Reserved - Domain Name
+              Reserved - Kurebuddy
             </span>
           </div>
           <div className="copyrightInput">
@@ -132,7 +132,7 @@ function Footer() {
         <div className="copyright">
           <span>
             Copyright <i className="fas fa-copyright"></i> 2021 -All Rights
-            Reserved - Domain Name
+            Reserved - Kurebuddy.com
           </span>
         </div>
       </div>
